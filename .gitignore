@@ -1,0 +1,11 @@
+# ts & cie
+.parcel-cache/
+dist/
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+
+# other apps
+.$*
