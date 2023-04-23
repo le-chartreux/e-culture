@@ -1,47 +1,42 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import UserInfoSmall from "@/components/UserInfoSmall.vue";
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <UserInfoSmall/>
   </header>
 
   <main>
-    <TheWelcome />
+    <img src="src/assets/logo/e-culture.png" alt="application logo">
+    <button>Create a game</button>
+    <button>Join a game</button>
   </main>
+
+  <footer>
+    <img src="src/assets/logo/polish-chartreuse-inc.png" alt="company logo">
+  </footer>
 </template>
 
 <style scoped>
 header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (width >= 1024px) {
-  header {
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+}
+
 </style>
