@@ -11,7 +11,8 @@ export default defineConfig({
     vue(),
     checker({
       vueTsc: true,
-      eslint: { lintCommand: 'eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore' }
+      eslint: { lintCommand: 'eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore' },
+      stylelint: { lintCommand: 'stylelint ./src/**/*.{css,vue}' }
     }),
   ],
   resolve: {
