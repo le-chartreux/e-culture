@@ -10,7 +10,8 @@ export default defineConfig({
   plugins: [
     vue(),
     checker({
-      vueTsc: true
+      vueTsc: true,
+      eslint: { lintCommand: 'eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore' }
     }),
   ],
   resolve: {
