@@ -1,7 +1,8 @@
 {
   "name": "e-culture",
   "version": "0.0.0",
-  "private": true,
+  "description": "Educational website to learn about english culture",
+  "private": false,
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -11,6 +12,20 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/le-chartreux/e-culture.git"
+  },
+  "keywords": [
+    "game",
+    "english",
+    "learn",
+    "culture",
+    "educational"
+  ],
+  "author": "le-chartreux",
+  "license": "MIT",
+  "homepage": "https://github.com/le-chartreux/e-culture#readme",
   "dependencies": {
     "vue": "^3.2.47"
   },
