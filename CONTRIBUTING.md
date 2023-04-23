@@ -17,10 +17,13 @@ In this guide you will get an overview of the contribution workflow, to get you 
     * [Cloning the repository](#cloning-the-repository)
     * [Moving to the cloned repository](#moving-to-the-cloned-repository)
     * [Installing the project dependencies](#installing-the-project-dependencies)
+  * [Development](#development)
     * [Compile and Hot-Reload for Development](#compile-and-hot-reload-for-development)
     * [Type-Check, Compile and Minify for Production](#type-check-compile-and-minify-for-production)
     * [Lint with ESLint](#lint-with-eslint)
     * [Formatting with Prettier](#formatting-with-prettier)
+    * [Type-Check](#type-check)
+  * [Deployment](#deployment)
 <!-- TOC -->
 
 ## Overview of the project
@@ -69,6 +72,8 @@ cd e-culture
 npm install
 ```
 
+## Development
+
 ### Compile and Hot-Reload for Development
 
 ```sh
@@ -92,3 +97,16 @@ npm run lint
 ```sh
 npm run format
 ```
+
+### Type-Check
+
+```sh
+npm run type-check
+```
+
+## Deployment
+
+```sh
+npm run deploy
+```
+
