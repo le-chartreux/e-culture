@@ -10,6 +10,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "stylelint": "stylelint \"./src/**/*.{css,vue}\" --fix",
     "format": "prettier --write src/",
     "deploy": "npm run build && npx gh-pages -d dist && rm -rf dist/*"
   },
@@ -41,8 +42,10 @@
     "eslint-plugin-vue": "^9.9.0",
     "gh-pages": "^5.0.0",
     "npm-run-all": "^4.1.5",
+    "postcss-html": "^1.5.0",
     "prettier": "^2.8.4",
     "stylelint": "^15.6.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard": "^33.0.0",
     "typescript": "~4.8.4",
     "vite": "^4.1.4",
