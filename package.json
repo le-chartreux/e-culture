@@ -29,7 +29,8 @@
   "license": "MIT",
   "homepage": "https://github.com/le-chartreux/e-culture#readme",
   "dependencies": {
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
