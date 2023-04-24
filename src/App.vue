@@ -14,7 +14,7 @@ import UserInfoSmall from "@/components/UserInfoSmall.vue";
   </main>
 
   <footer>
-    <img src="@/assets/logo/polish-chartreuse-inc.png" alt="company logo">
+    <img src="assets/logo/company.png" alt="company logo">
   </footer>
 </template>
 
