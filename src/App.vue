@@ -8,13 +8,13 @@ import UserInfoSmall from "@/components/UserInfoSmall.vue";
   </header>
 
   <main>
-    <img src="assets/logo/application.png" alt="application logo">
+    <img src="/src/assets/logo/application.png" alt="application logo">
     <button>Create a game</button>
     <button>Join a game</button>
   </main>
 
   <footer>
-    <img src="assets/logo/company.png" alt="company logo">
+    <img src="/src/assets/logo/company.png" alt="company logo">
   </footer>
 </template>
 
