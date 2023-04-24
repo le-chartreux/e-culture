@@ -36,3 +36,17 @@ body {
     Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
 }
+
+.router-button  {
+  text-decoration: none;
+  color: var(--color-text);
+  display: block;
+  text-align: center;
+  background: var(--color-background-soft);
+  border: solid var(--color-border);
+}
+
+.router-button:hover {
+  border: solid var(--color-border-hover);
+}
+

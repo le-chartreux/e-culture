@@ -10,10 +10,10 @@ import UserInfoSmall from "@/components/UserInfoSmall.vue";
 
   <main>
     <img src="/src/assets/logo/application.png" alt="application logo">
-    <div id="create-or-join">
-      <button>Create a game</button>
-      <button>Join a game</button>
-      <button>About Us</button>
+    <div id="actions">
+      <router-link class="router-button" to="/create-game">Create a game</router-link>
+      <router-link class="router-button" to="/join-game">Join a game</router-link>
+      <router-link class="router-button" to="/about">About Us</router-link>
     </div>
   </main>
 
@@ -41,7 +41,7 @@ main > img {
     flex: 5;
 }
 
-#create-or-join {
+#actions {
     width: 40%;
     margin: 1rem;
     flex: 2;
