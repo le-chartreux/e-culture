@@ -48,6 +48,6 @@ body {
 }
 
 .router-button:hover {
-  border: solid var(--color-border-hover);
+  border: solid var(--color-border-hover) 2px;
 }
 
