@@ -43,7 +43,8 @@ body {
   display: block;
   text-align: center;
   background: var(--color-background-soft);
-  border: solid var(--color-border);
+  border: solid var(--color-border) 2px;
+  border-radius: 5px;
 }
 
 .router-button:hover {
