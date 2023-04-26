@@ -6,10 +6,10 @@ import './assets/main.css'
 
 createApp(App).use(router).mount('#app')
 
+let initialRoute = '/'
 // to save current page when reloading
 window.addEventListener('beforeunload', () => {
-  localStorage.setItem('lastRoute', router.currentRoute.value.path)
+  sessionStorage.setItem('lastRoute', router.currentRoute.value.path)
 })
-const lastRoute = localStorage.getItem('lastRoute')
-const initialRoute = lastRoute || '/'
+initialRoute = sessionStorage.getItem('lastRoute') || initialRoute
 router.push(initialRoute)
