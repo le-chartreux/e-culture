@@ -27,7 +27,6 @@
   --section-gap: 160px;
 }
 
-
 body {
   color: var(--color-text);
   background: var(--color-background);
@@ -37,7 +36,7 @@ body {
   font-size: 15px;
 }
 
-.pseudo-button  {
+.pseudo-button {
   text-decoration: none;
   color: var(--color-text);
   display: block;
@@ -51,4 +50,3 @@ body {
 .pseudo-button:hover {
   border: solid var(--color-border-hover) 2px;
 }
-

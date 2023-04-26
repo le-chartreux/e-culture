@@ -1,30 +1,30 @@
 import { createWebHistory, createRouter } from 'vue-router'
-import HomeView from "@/views/HomeView.vue";
-import CreateGameView from "@/views/CreateGameView.vue";
-import JoinGameView from "@/views/JoinGameView.vue";
-import AboutView from "@/views/AboutView.vue";
-import GameVue from "@/views/GameVue.vue";
+import HomeView from '@/views/HomeView.vue'
+import CreateGameView from '@/views/CreateGameView.vue'
+import JoinGameView from '@/views/JoinGameView.vue'
+import AboutView from '@/views/AboutView.vue'
+import GameVue from '@/views/GameVue.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: HomeView,
+    component: HomeView
   },
   {
     path: '/create-game',
     name: 'Create game',
-    component: CreateGameView,
+    component: CreateGameView
   },
   {
     path: '/join-game',
     name: 'Join game',
-    component: JoinGameView,
+    component: JoinGameView
   },
   {
     path: '/about',
     name: 'About',
-    component: AboutView,
+    component: AboutView
   },
   {
     path: '/game/:id',
@@ -35,7 +35,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory('/e-culture/'),
-  routes,
+  routes
 })
 
 export default router
