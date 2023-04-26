@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import JoinGameFromId from "@/components/JoinGame/JoinGameFromId.vue";
+import JoinGameRandom from "@/components/JoinGame/JoinGameRandom.vue";
+</script>
+
 <template>
-<p>Join game here</p>
+  <JoinGameRandom/>
+  <JoinGameFromId/>
 </template>

@@ -3,6 +3,7 @@ import HomeView from "@/views/HomeView.vue";
 import CreateGameView from "@/views/CreateGameView.vue";
 import JoinGameView from "@/views/JoinGameView.vue";
 import AboutView from "@/views/AboutView.vue";
+import GameVue from "@/views/GameVue.vue";
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     name: 'About',
     component: AboutView,
   },
+  {
+    path: '/game/:id',
+    name: 'Game',
+    component: GameVue
+  }
 ]
 
 const router = createRouter({
