@@ -5,14 +5,16 @@
   "private": false,
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check build-only",
-    "preview": "vite preview",
+    "deploy": "run-p quality-check build && npx gh-pages -d dist",
+    "build": "run-s rmdist && run-s build-only",
+    "rmdist": "rm -rf dist/*",
     "build-only": "vite build",
+    "quality-check": "run-p type-check lint stylelint",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "stylelint": "stylelint \"./src/**/*.{css,vue}\" --fix",
-    "format": "prettier --write src/",
-    "deploy": "npm run build && npx gh-pages -d dist && rm -rf dist/*"
+    "preview": "vite preview",
+    "format": "prettier --write src/"
   },
   "repository": {
     "type": "git",
