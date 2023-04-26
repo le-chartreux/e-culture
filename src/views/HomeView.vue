@@ -11,9 +11,9 @@ import UserInfoSmall from "@/components/UserInfoSmall.vue";
   <main>
     <img src="/src/assets/logo/application.png" alt="application logo">
     <div id="actions">
-      <router-link class="router-button" to="/create-game">Create a game</router-link>
-      <router-link class="router-button" to="/join-game">Join a game</router-link>
-      <router-link class="router-button" to="/about">About Us</router-link>
+      <router-link class="pseudo-button" to="/create-game">Create a game</router-link>
+      <router-link class="pseudo-button" to="/join-game">Join a game</router-link>
+      <router-link class="pseudo-button" to="/about">About Us</router-link>
     </div>
   </main>
 

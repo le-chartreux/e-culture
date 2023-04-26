@@ -37,7 +37,7 @@ body {
   font-size: 15px;
 }
 
-.router-button  {
+.pseudo-button  {
   text-decoration: none;
   color: var(--color-text);
   display: block;
@@ -48,7 +48,7 @@ body {
   padding: 1px 5px;
 }
 
-.router-button:hover {
+.pseudo-button:hover {
   border: solid var(--color-border-hover) 2px;
 }
 
