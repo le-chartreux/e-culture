@@ -7,15 +7,14 @@
 
 <style scoped>
 #join-random-game {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 #join-random-game > * {
-    margin: 10px;
-    padding: 5px;
+  margin: 10px;
+  padding: 5px;
 }
-
 </style>

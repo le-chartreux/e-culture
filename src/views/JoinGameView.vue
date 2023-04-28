@@ -16,21 +16,20 @@ import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 
 <style scoped>
 #join-game {
-    display: flex;
-    flex-direction: column;
-    height: 100dvh;
-    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  padding: 1rem;
 }
 
 #different-join {
-    display: flex;
-    justify-content: space-around;
-    flex-grow: 1;
-    font-size: large;
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+  font-size: large;
 }
 
 #different-join > * {
-    min-width: 25%;
+  min-width: 25%;
 }
-
 </style>
