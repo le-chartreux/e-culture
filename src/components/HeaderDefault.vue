@@ -4,7 +4,7 @@ import UserInfoSmall from "@/components/UserInfoSmall.vue";
 
 <template>
   <header>
-    <router-link to="/"><img src="/src/assets/logo/application.png" alt="application logo" /></router-link>
+    <router-link to="/"><img src="/src/assets/logo/application-without-text.png" alt="application logo" /></router-link>
     <UserInfoSmall />
   </header>
 </template>
@@ -18,7 +18,7 @@ header {
 }
 
 header * {
-    height: 10dvh;
+    height: 7dvh;
 }
 
 </style>
