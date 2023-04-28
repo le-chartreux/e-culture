@@ -20,3 +20,12 @@ import HeaderDefault from '@/components/Header/HeaderDefault.vue'
     <p>Game with ID {{ gameId }} here</p>
   </div>
 </template>
+
+<style scoped>
+#game {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    padding: 1rem;
+}
+</style>
