@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import HeaderDefault from "@/components/HeaderDefault.vue";
+import HeaderDefault from '@/components/HeaderDefault.vue'
 </script>
 
 <template>
   <div id="home">
-    <HeaderDefault/>
+    <HeaderDefault />
 
     <main>
       <img src="/src/assets/logo/application.png" alt="application logo" />
