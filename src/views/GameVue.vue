@@ -17,7 +17,10 @@ import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 <template>
   <div id="game">
     <HeaderDefault />
-    <p>Game with ID {{ gameId }} here</p>
+    <div id="game-information">
+      <h2>Game {{gameId}}</h2>
+      <p>Waiting for the game to start...</p>
+    </div>
   </div>
 </template>
 
@@ -28,4 +31,13 @@ import HeaderDefault from '@/components/Header/HeaderDefault.vue'
   height: 100dvh;
   padding: 1rem;
 }
+
+#game-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
 </style>
