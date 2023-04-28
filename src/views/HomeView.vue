@@ -3,25 +3,38 @@ import UserInfoSmall from '@/components/UserInfoSmall.vue'
 </script>
 
 <template>
-  <header>
-    <UserInfoSmall />
-  </header>
+  <div id="home">
+    <header>
+      <UserInfoSmall />
+    </header>
 
-  <main>
-    <img src="/src/assets/logo/application.png" alt="application logo" />
-    <div id="actions">
-      <router-link class="pseudo-button" to="/create-game">Create a game</router-link>
-      <router-link class="pseudo-button" to="/join-game">Join a game</router-link>
-      <router-link class="pseudo-button" to="/about">About Us</router-link>
-    </div>
-  </main>
+    <main>
+      <img src="/src/assets/logo/application.png" alt="application logo" />
+      <div id="actions">
+        <router-link class="pseudo-button" to="/create-game">Create a game</router-link>
+        <router-link class="pseudo-button" to="/join-game">Join a game</router-link>
+        <router-link class="pseudo-button" to="/about">About Us</router-link>
+      </div>
+    </main>
 
-  <footer>
-    <img src="/src/assets/logo/company.png" alt="company logo" />
-  </footer>
+    <footer>
+      <img src="/src/assets/logo/company.png" alt="company logo" />
+    </footer>
+  </div>
+
 </template>
 
 <style scoped>
+
+#home {
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
 header {
   display: flex;
   justify-content: end;
@@ -56,4 +69,5 @@ footer {
   width: 100%;
   flex-grow: 1;
 }
+
 </style>
