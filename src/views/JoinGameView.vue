@@ -5,7 +5,32 @@ import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 </script>
 
 <template>
-  <HeaderDefault />
-  <JoinGameRandom />
-  <JoinGameFromId />
+  <div id="join-game">
+    <HeaderDefault />
+    <div id="different-join">
+      <JoinGameRandom />
+      <JoinGameFromId />
+    </div>
+  </div>
 </template>
+
+<style scoped>
+#join-game {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    padding: 1rem;
+}
+
+#different-join {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    font-size: large;
+}
+
+#different-join > * {
+    min-width: 25%;
+}
+
+</style>
