@@ -21,18 +21,16 @@ import UserInfoSmall from '@/components/UserInfoSmall.vue'
       <img src="/src/assets/logo/company.png" alt="company logo" />
     </footer>
   </div>
-
 </template>
 
 <style scoped>
-
 #home {
-    height: 100vh;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header {
@@ -69,5 +67,4 @@ footer {
   width: 100%;
   flex-grow: 1;
 }
-
 </style>
