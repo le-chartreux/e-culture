@@ -38,7 +38,7 @@ main {
 }
 
 main > img {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 #actions {
@@ -49,8 +49,8 @@ main > img {
 }
 
 .pseudo-button {
-    margin: 5px;
-    padding: 5px 30px;
+  margin: 5px;
+  padding: 5px 30px;
 }
 
 footer {
