@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import UserInfoSmall from '@/components/UserInfoSmall.vue'
+import HeaderDefault from "@/components/HeaderDefault.vue";
 </script>
 
 <template>
   <div id="home">
-    <header>
-      <UserInfoSmall />
-    </header>
+    <HeaderDefault/>
 
     <main>
       <img src="/src/assets/logo/application.png" alt="application logo" />
@@ -25,19 +23,11 @@ import UserInfoSmall from '@/components/UserInfoSmall.vue'
 
 <style scoped>
 #home {
-  height: 100vh;
+  height: 100dvh;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-}
-
-header {
-  display: flex;
-  justify-content: end;
-  width: 100%;
-  flex-grow: 1;
 }
 
 main {
