@@ -34,27 +34,29 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-grow: 8;
+  flex-grow: 1;
 }
 
 main > img {
-  flex: 5;
+    flex-grow: 1;
 }
 
 #actions {
-  width: 40%;
   margin: 1rem;
-  flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.pseudo-button {
+    margin: 5px;
+    padding: 5px 30px;
 }
 
 footer {
   display: flex;
   flex-direction: row;
   justify-content: end;
-  width: 100%;
-  flex-grow: 1;
+  height: 10%;
 }
 </style>
