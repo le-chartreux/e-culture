@@ -1,8 +1,22 @@
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  data() {
+    return {
+      gameId: this.$route.params.id
+    }
+  }
+})
+</script>
+
 <script setup lang="ts">
 import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 </script>
 
 <template>
-  <HeaderDefault />
-  <p>Game with ID {{ $route.params.id }} here</p>
+  <div id="game">
+    <HeaderDefault />
+    <p>Game with ID {{ gameId }} here</p>
+  </div>
 </template>
