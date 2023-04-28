@@ -23,9 +23,9 @@ import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 
 <style scoped>
 #game {
-    display: flex;
-    flex-direction: column;
-    height: 100dvh;
-    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  padding: 1rem;
 }
 </style>
