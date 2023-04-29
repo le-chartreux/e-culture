@@ -18,8 +18,8 @@ app.mount('#app')
 // generating player if it does not exist
 if (!Player.storedOnLocalStorage()) {
   const player = Player.generate()
-  console.debug(`player ${player} generated`)
   player.saveOnLocalStorage()
+  player.push()
 }
 
 // to save current page when reloading

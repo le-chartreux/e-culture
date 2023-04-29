@@ -1,27 +1,34 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { gamesRef } from '@/firebase'
-import { doc } from 'firebase/firestore'
+import { updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore'
 
 import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 import PlayersList from '@/components/PlayersList.vue'
-import type { Game } from '@/firebase/entities/Game'
+import { Game } from '@/firebase/entities/Game'
+import { Player } from '@/firebase/entities/Player'
 
 export default defineComponent({
   data() {
     return {
       gameId: this.$route.params.id as string,
-      game: Object as unknown as Game
+      game: Object as unknown as Game,
+      player: Player.loadFromLocalStorage()
     }
   },
   components: { HeaderDefault, PlayersList },
   watch: {
     gameId: {
       immediate: true,
-      handler(gameId: string) {
-        this.$firestoreBind('game', doc(gamesRef, gameId))
+      handler() {
+        this.$firestoreBind('game', Game.getRef(this.gameId))
       }
     }
+  },
+  mounted() {
+    updateDoc(Game.getRef(this.gameId), {players: arrayUnion(this.player.ref)})
+  },
+  unmounted() {
+    updateDoc(Game.getRef(this.gameId), {players: arrayRemove(this.player.ref)})
   }
 })
 </script>
