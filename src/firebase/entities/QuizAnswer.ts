@@ -3,7 +3,7 @@ export class QuizAnswer {
   correct: boolean
 
   constructor(answer: string, correct: boolean) {
-    this.answer = answer;
-    this.correct = correct;
+    this.answer = answer
+    this.correct = correct
   }
 }

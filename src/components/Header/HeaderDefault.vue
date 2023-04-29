@@ -3,7 +3,7 @@ import UserInfoSmall from '@/components/Header/UserInfoSmall.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  components: {UserInfoSmall}
+  components: { UserInfoSmall }
 })
 </script>
 

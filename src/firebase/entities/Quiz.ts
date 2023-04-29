@@ -1,4 +1,4 @@
-import type { QuizAnswer } from "@/firebase/entities/QuizAnswer";
+import type { QuizAnswer } from '@/firebase/entities/QuizAnswer'
 
 export class Quiz {
   question: string
@@ -6,8 +6,8 @@ export class Quiz {
   id: string
 
   constructor(question: string, answers: QuizAnswer[], id: string) {
-    this.question = question;
-    this.answers = answers;
-    this.id = id;
+    this.question = question
+    this.answers = answers
+    this.id = id
   }
 }

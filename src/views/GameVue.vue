@@ -1,12 +1,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { gamesRef } from "@/firebase";
-import { doc } from "firebase/firestore";
+import { gamesRef } from '@/firebase'
+import { doc } from 'firebase/firestore'
 
 import HeaderDefault from '@/components/Header/HeaderDefault.vue'
-import PlayersList from "@/components/PlayersList.vue";
-import type { Game } from "@/firebase/entities/Game";
-
+import PlayersList from '@/components/PlayersList.vue'
+import type { Game } from '@/firebase/entities/Game'
 
 export default defineComponent({
   data() {
@@ -15,12 +14,12 @@ export default defineComponent({
       game: Object as unknown as Game
     }
   },
-  components: {HeaderDefault, PlayersList},
+  components: { HeaderDefault, PlayersList },
   watch: {
     gameId: {
       immediate: true,
       handler(gameId: string) {
-        this.$firestoreBind("game", doc(gamesRef, gameId))
+        this.$firestoreBind('game', doc(gamesRef, gameId))
       }
     }
   }
@@ -31,7 +30,7 @@ export default defineComponent({
   <div id="game">
     <HeaderDefault />
     <div id="game-information">
-      <h2>Game {{gameId}}</h2>
+      <h2>Game {{ gameId }}</h2>
       <p>Waiting for the game to start...</p>
       <p>Players in this game:</p>
       <PlayersList :players="game.players"></PlayersList>
@@ -48,11 +47,10 @@ export default defineComponent({
 }
 
 #game-information {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
 }
-
 </style>

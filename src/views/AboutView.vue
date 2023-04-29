@@ -3,7 +3,7 @@ import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  components: {HeaderDefault}
+  components: { HeaderDefault }
 })
 </script>
 

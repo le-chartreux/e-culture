@@ -1,4 +1,4 @@
-import type { Player } from "@/firebase/entities/Player";
+import type { Player } from '@/firebase/entities/Player'
 
 export class Game {
   id: string

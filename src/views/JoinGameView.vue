@@ -5,7 +5,7 @@ import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  components: {JoinGameFromId, JoinGameRandom, HeaderDefault}
+  components: { JoinGameFromId, JoinGameRandom, HeaderDefault }
 })
 </script>
 
