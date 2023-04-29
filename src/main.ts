@@ -25,5 +25,5 @@ window.addEventListener('beforeunload', () => {
 })
 const initialRoute = sessionStorage.getItem('lastRoute') || '/'
 router.push(initialRoute)
-  .then(() => { console.log(`location set to ${initialRoute}.`) })
+  .then(() => { console.debug(`location set to ${initialRoute}.`) })
   .catch((reason) => {console.error(`impossible to set location to ${initialRoute} because ${reason}`)})
