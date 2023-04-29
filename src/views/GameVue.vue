@@ -12,10 +12,6 @@ export default defineComponent({
 })
 </script>
 
-<script setup lang="ts">
-import HeaderDefault from '@/components/Header/HeaderDefault.vue'
-</script>
-
 <template>
   <div id="game">
     <HeaderDefault />
