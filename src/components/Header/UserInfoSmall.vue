@@ -1,13 +1,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { Player } from "@/firebase/entities/Player";
 export default defineComponent({
-  props: {
-    userName: String
-  }
+  data() {return {
+    player: Player.loadFromLocalStorage()
+  }}
 })
 </script>
 
 <template>
-  <p v-if="userName">{{ userName }}</p>
-  <p v-else>User name not set</p>
+  <p>{{ player.pseudo }}</p>
 </template>

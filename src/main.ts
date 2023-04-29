@@ -5,6 +5,7 @@ import { VueFire, VueFireFirestoreOptionsAPI } from "vuefire";
 
 import App from './App.vue'
 import './assets/main.css'
+import { Player } from "@/firebase/entities/Player";
 
 const app = createApp(App)
 app.use(router)
@@ -18,6 +19,13 @@ app.use(
   }
 )
 app.mount('#app')
+
+// generating player if it does not exist
+if (! Player.storedOnLocalStorage()) {
+  const player = Player.generate()
+  console.debug(`player ${player} generated`)
+  player.saveOnLocalStorage()
+}
 
 // to save current page when reloading
 window.addEventListener('beforeunload', () => {
