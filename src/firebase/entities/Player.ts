@@ -1,6 +1,6 @@
 import { doc, setDoc } from 'firebase/firestore'
 
-import { playersRef } from "@/firebase";
+import { playersRef } from '@/firebase'
 
 export class Player {
   pseudo: string
@@ -49,6 +49,8 @@ export class Player {
   push(): void {
     setDoc(this.ref, Object.assign({}, this))
       .then(() => console.debug(`Player ${this} pushed to firebase`))
-      .catch((reason) => {console.error(`Player ${this} not pushed to firebase: ${reason}`)})
+      .catch((reason) => {
+        console.error(`Player ${this} not pushed to firebase: ${reason}`)
+      })
   }
 }

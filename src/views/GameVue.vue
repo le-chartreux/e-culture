@@ -25,10 +25,10 @@ export default defineComponent({
     }
   },
   mounted() {
-    updateDoc(Game.getRef(this.gameId), {players: arrayUnion(this.player.ref)})
+    updateDoc(Game.getRef(this.gameId), { players: arrayUnion(this.player.ref) })
   },
   unmounted() {
-    updateDoc(Game.getRef(this.gameId), {players: arrayRemove(this.player.ref)})
+    updateDoc(Game.getRef(this.gameId), { players: arrayRemove(this.player.ref) })
   }
 })
 </script>

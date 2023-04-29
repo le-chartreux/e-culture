@@ -19,5 +19,4 @@ export class Game {
   static getRef(id: string) {
     return doc(gamesRef, id)
   }
-
 }
