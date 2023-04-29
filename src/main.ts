@@ -7,6 +7,7 @@ import App from './App.vue'
 import './assets/main.css'
 import { Player } from '@/firebase/entities/Player'
 
+// basic setup of the app
 const app = createApp(App)
 app.use(router)
 app.use(VueFire, {
@@ -22,7 +23,7 @@ if (!Player.storedOnLocalStorage()) {
   player.push()
 }
 
-// to save current page when reloading
+// saving current page when reloading
 window.addEventListener('beforeunload', () => {
   sessionStorage.setItem('lastRoute', router.currentRoute.value.path)
 })

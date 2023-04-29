@@ -12,6 +12,7 @@ const firebaseConfig = {
 
 const firebaseApp = initializeApp(firebaseConfig)
 const db = getFirestore()
+/* do not use these: use entities methods */
 const gamesRef = collection(db, 'games')
 const playersRef = collection(db, 'players')
 const quizzesRef = collection(db, 'quizzes')

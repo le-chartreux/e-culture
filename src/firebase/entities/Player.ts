@@ -12,6 +12,7 @@ export class Player {
     this.id = id
   }
 
+  /* create a random player */
   static generate(): Player {
     const maxId = 10 ** 12
     const id = Math.floor(Math.random() * maxId)

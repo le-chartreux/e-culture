@@ -25,9 +25,11 @@ export default defineComponent({
     }
   },
   mounted() {
+    /* adding the player to the list of players of this game */
     updateDoc(Game.getRef(this.gameId), { players: arrayUnion(this.player.ref) })
   },
   unmounted() {
+    /* removing the player from the list of players of this game */
     updateDoc(Game.getRef(this.gameId), { players: arrayRemove(this.player.ref) })
   }
 })
