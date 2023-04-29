@@ -1,5 +1,10 @@
-<script setup lang="ts">
+<script lang="ts">
 import UserInfoSmall from '@/components/Header/UserInfoSmall.vue'
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  components: {UserInfoSmall}
+})
 </script>
 
 <template>
