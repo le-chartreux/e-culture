@@ -1,7 +1,12 @@
-<script setup lang="ts">
+<script lang="ts">
 import JoinGameFromId from '@/components/JoinGame/JoinGameFromId.vue'
 import JoinGameRandom from '@/components/JoinGame/JoinGameRandom.vue'
 import HeaderDefault from '@/components/Header/HeaderDefault.vue'
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  components: {JoinGameFromId, JoinGameRandom, HeaderDefault}
+})
 </script>
 
 <template>

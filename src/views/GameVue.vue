@@ -1,4 +1,5 @@
 <script lang="ts">
+import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
@@ -6,7 +7,8 @@ export default defineComponent({
     return {
       gameId: this.$route.params.id
     }
-  }
+  },
+  components: {HeaderDefault}
 })
 </script>
 
