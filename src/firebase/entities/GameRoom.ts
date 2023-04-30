@@ -1,4 +1,4 @@
-import { doc, DocumentSnapshot, getDoc } from "firebase/firestore";
+import { doc, DocumentSnapshot, getDoc } from 'firebase/firestore'
 
 import { Player } from '@/firebase/entities/Player'
 import { gameRoomsRef } from '@/firebase'

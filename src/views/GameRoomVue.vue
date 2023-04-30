@@ -1,6 +1,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { updateDoc, arrayUnion, arrayRemove, onSnapshot, DocumentSnapshot, type Unsubscribe } from 'firebase/firestore'
+import {
+  updateDoc,
+  arrayUnion,
+  arrayRemove,
+  onSnapshot,
+  DocumentSnapshot,
+  type Unsubscribe
+} from 'firebase/firestore'
 
 import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 import PlayersList from '@/components/PlayersList.vue'
@@ -24,14 +31,16 @@ export default defineComponent({
     async subscribeGameRoom() {
       this.unSubscribeGameRoom = onSnapshot(
         GameRoom.getRef(this.gameRoomId),
-        async (snapshot: DocumentSnapshot) => { this.gameRoom = await GameRoom.loadServerFromSnapshot(snapshot) }
+        async (snapshot: DocumentSnapshot) => {
+          this.gameRoom = await GameRoom.loadServerFromSnapshot(snapshot)
+        }
       )
     },
     async joinGameRoom() {
-      await updateDoc(GameRoom.getRef(this.gameRoomId), {players: arrayUnion(this.player.ref)})
+      await updateDoc(GameRoom.getRef(this.gameRoomId), { players: arrayUnion(this.player.ref) })
     },
     async quitGameRoom() {
-      await updateDoc(GameRoom.getRef(this.gameRoomId), {players: arrayRemove(this.player.ref)})
+      await updateDoc(GameRoom.getRef(this.gameRoomId), { players: arrayRemove(this.player.ref) })
     }
   },
   mounted() {
