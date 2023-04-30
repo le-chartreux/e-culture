@@ -21,7 +21,7 @@ export class Game {
 
   /* Sum the char codes of the string seed  */
   private static stringSeedToNumberSeed(seed: string): number {
-    return seed.split('').reduce((partialSum, a) => partialSum + a.charCodeAt(0), 0);
+    return seed.split('').reduce((partialSum, a) => partialSum + a.charCodeAt(0), 0)
   }
 
   /* Create a deterministic game from a number seed and a number of quizzes
