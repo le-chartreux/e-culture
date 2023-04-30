@@ -32,12 +32,14 @@
   "homepage": "https://github.com/le-chartreux/e-culture#readme",
   "dependencies": {
     "firebase": "^9.21.0",
+    "pure-rand": "^6.0.2",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/node": "^18.14.2",
+    "@types/seedrandom": "^3.0.5",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/eslint-config-typescript": "^11.0.2",

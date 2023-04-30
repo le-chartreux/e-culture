@@ -1,0 +1,29 @@
+[
+  {
+    "question": "What is the capital of the United Kingdom?",
+    "answers": [
+      { "answer": "London", "correct": true },
+      { "answer": "Paris", "correct": false },
+      { "answer": "Birmingham", "correct": false },
+      { "answer": "Manchester", "correct": false }
+    ]
+  },
+  {
+    "question": "How many inhabited islands belong to the United Kingdom?",
+    "answers": [
+      { "answer": "129", "correct": true },
+      { "answer": "17", "correct": false },
+      { "answer": "73", "correct": false },
+      { "answer": "214", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of those city names is NOT in the United Kingdom?",
+    "answers": [
+      { "answer": "Bergen", "correct": true },
+      { "answer": "Belfast", "correct": false },
+      { "answer": "Glasgow", "correct": false },
+      { "answer": "Swansea", "correct": false }
+    ]
+  }
+]
