@@ -1,4 +1,4 @@
-import { doc, DocumentSnapshot, getDoc } from 'firebase/firestore'
+import { doc, DocumentReference, DocumentSnapshot, getDoc } from "firebase/firestore";
 
 import { Player } from '@/firebase/entities/Player'
 import { gameRoomsRef } from '@/firebase'
@@ -35,11 +35,11 @@ export class GameRoom {
     }
   }
 
-  get ref() {
+  get ref(): DocumentReference {
     return GameRoom.getRef(this.id)
   }
 
-  static getRef(id: string) {
+  static getRef(id: string): DocumentReference {
     return doc(gameRoomsRef, id)
   }
 }
