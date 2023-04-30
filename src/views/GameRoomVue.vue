@@ -36,6 +36,11 @@ export default defineComponent({
         }
       )
     },
+    unsubscribeGameRoomIfSubscribed() {
+      if (this.unSubscribeGameRoom) {
+        this.unSubscribeGameRoom()
+      }
+    },
     async joinGameRoom() {
       await updateDoc(GameRoom.getRef(this.gameRoomId), { players: arrayUnion(this.player.ref) })
     },
@@ -50,6 +55,7 @@ export default defineComponent({
   },
   unmounted() {
     this.quitGameRoom()
+    this.unsubscribeGameRoomIfSubscribed()
   }
 })
 </script>
