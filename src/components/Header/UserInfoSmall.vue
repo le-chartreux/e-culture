@@ -4,7 +4,7 @@ import { Player } from '@/firebase/entities/Player'
 export default defineComponent({
   data() {
     return {
-      player: Player.loadFromLocalStorage()
+      player: Player.loadLocal()
     }
   }
 })

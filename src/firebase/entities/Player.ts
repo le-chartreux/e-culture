@@ -20,15 +20,15 @@ export class Player {
     return new Player(pseudo, id.toString())
   }
 
-  saveOnLocalStorage(): void {
+  saveLocal(): void {
     localStorage.setItem(Player.LOCAL_STORAGE_KEY, JSON.stringify(this))
   }
 
-  static storedOnLocalStorage(): boolean {
+  static savedLocally(): boolean {
     return localStorage.getItem(Player.LOCAL_STORAGE_KEY) != null
   }
 
-  static loadFromLocalStorage(): Player {
+  static loadLocal(): Player {
     const localPlayer = localStorage.getItem(Player.LOCAL_STORAGE_KEY)
     if (localPlayer) {
       const playerDict = JSON.parse(localPlayer)
@@ -46,8 +46,7 @@ export class Player {
     return doc(playersRef, id)
   }
 
-  /* Save on firebase */
-  push(): void {
+  saveServer(): void {
     setDoc(this.ref, Object.assign({}, this))
       .then(() => console.debug(`Player ${this} pushed to firebase`))
       .catch((reason) => {

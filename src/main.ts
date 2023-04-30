@@ -17,10 +17,10 @@ app.use(VueFire, {
 app.mount('#app')
 
 // generating player if it does not exist
-if (!Player.storedOnLocalStorage()) {
+if (!Player.savedLocally()) {
   const player = Player.generate()
-  player.saveOnLocalStorage()
-  player.push()
+  player.saveLocal()
+  player.saveServer()
 }
 
 // saving current page when reloading

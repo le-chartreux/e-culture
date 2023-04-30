@@ -12,7 +12,7 @@ export default defineComponent({
     return {
       gameRoomId: this.$route.params.id as string,
       gameRoom: Object as unknown as GameRoom,
-      player: Player.loadFromLocalStorage()
+      player: Player.loadLocal()
     }
   },
   components: { HeaderDefault, PlayersList },
