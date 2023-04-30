@@ -1,5 +1,5 @@
-import { initializeApp } from 'firebase/app'
-import { collection, getFirestore } from 'firebase/firestore'
+import { initializeApp, type FirebaseApp } from 'firebase/app'
+import { collection, getFirestore, CollectionReference, Firestore } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBdrW-op61lrviPqesC6ez5K5aSxHf_Y14',
@@ -10,11 +10,11 @@ const firebaseConfig = {
   appId: '1:52761179686:web:19db1bff3af727288658e7'
 }
 
-const firebaseApp = initializeApp(firebaseConfig)
-const db = getFirestore()
-/* do not use these: use entities methods */
-const gameRoomsRef = collection(db, 'game-rooms')
-const playersRef = collection(db, 'players')
-const quizzesRef = collection(db, 'quizzes')
+const firebaseApp: FirebaseApp = initializeApp(firebaseConfig)
+const db: Firestore = getFirestore()
+/* do not use these outside this package: use entities methods instead */
+const gameRoomsRef: CollectionReference = collection(db, 'game-rooms')
+const playersRef: CollectionReference = collection(db, 'players')
+const quizzesRef: CollectionReference = collection(db, 'quizzes')
 
 export { firebaseApp, gameRoomsRef, playersRef, quizzesRef }

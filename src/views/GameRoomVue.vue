@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore'
+import { updateDoc, arrayUnion, arrayRemove, onSnapshot, DocumentSnapshot, type Unsubscribe } from 'firebase/firestore'
 
 import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 import PlayersList from '@/components/PlayersList.vue'
@@ -11,26 +11,36 @@ export default defineComponent({
   data() {
     return {
       gameRoomId: this.$route.params.id as string,
-      gameRoom: Object as unknown as GameRoom,
-      player: Player.loadLocal()
+      gameRoom: null as null | GameRoom,
+      player: Player.loadLocal(),
+      unSubscribeGameRoom: null as null | Unsubscribe
     }
   },
   components: { HeaderDefault, PlayersList },
-  watch: {
-    gameRoomId: {
-      immediate: true,
-      handler() {
-        this.$firestoreBind('gameRoom', GameRoom.getRef(this.gameRoomId))
-      }
+  methods: {
+    async setGameRoom() {
+      this.gameRoom = await GameRoom.loadServerFromId(this.gameRoomId)
+    },
+    async subscribeGameRoom() {
+      this.unSubscribeGameRoom = onSnapshot(
+        GameRoom.getRef(this.gameRoomId),
+        async (snapshot: DocumentSnapshot) => { this.gameRoom = await GameRoom.loadServerFromSnapshot(snapshot) }
+      )
+    },
+    async joinGameRoom() {
+      await updateDoc(GameRoom.getRef(this.gameRoomId), {players: arrayUnion(this.player.ref)})
+    },
+    async quitGameRoom() {
+      await updateDoc(GameRoom.getRef(this.gameRoomId), {players: arrayRemove(this.player.ref)})
     }
   },
   mounted() {
-    /* adding the player to the list of players of this game room */
-    updateDoc(GameRoom.getRef(this.gameRoomId), { players: arrayUnion(this.player.ref) })
+    this.setGameRoom()
+    this.subscribeGameRoom()
+    this.joinGameRoom()
   },
   unmounted() {
-    /* removing the player from the list of players of this game room */
-    updateDoc(GameRoom.getRef(this.gameRoomId), { players: arrayRemove(this.player.ref) })
+    this.quitGameRoom()
   }
 })
 </script>
@@ -41,8 +51,10 @@ export default defineComponent({
     <div id="game-room-information">
       <h2>Game Room {{ gameRoomId }}</h2>
       <p>Waiting for the game to start...</p>
-      <p>Players in this Game Room:</p>
-      <PlayersList :players="gameRoom.players"></PlayersList>
+      <div v-if="gameRoom">
+        <p>Players in this Game Room:</p>
+        <PlayersList :players="gameRoom.players"></PlayersList>
+      </div>
     </div>
   </div>
 </template>
