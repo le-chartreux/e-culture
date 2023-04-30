@@ -9,5 +9,5 @@ export default defineComponent({
 
 <template>
   <HeaderDefault />
-  <p>Create game here</p>
+  <p>Create Game Room here</p>
 </template>

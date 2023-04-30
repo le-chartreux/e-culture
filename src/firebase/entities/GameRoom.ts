@@ -1,9 +1,9 @@
 import { doc } from 'firebase/firestore'
 
 import type { Player } from '@/firebase/entities/Player'
-import { gamesRef } from '@/firebase'
+import { gameRoomsRef } from '@/firebase'
 
-export class Game {
+export class GameRoom {
   id: string
   players: Player[]
 
@@ -13,10 +13,10 @@ export class Game {
   }
 
   get ref() {
-    return Game.getRef(this.id)
+    return GameRoom.getRef(this.id)
   }
 
   static getRef(id: string) {
-    return doc(gamesRef, id)
+    return doc(gameRoomsRef, id)
   }
 }

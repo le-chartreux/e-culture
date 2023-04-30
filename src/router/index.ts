@@ -1,9 +1,9 @@
 import { createWebHistory, createRouter } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
-import CreateGameView from '@/views/CreateGameView.vue'
-import JoinGameView from '@/views/JoinGameView.vue'
+import CreateGameRoomView from '@/views/CreateGameRoomView.vue'
+import JoinGameRoomView from '@/views/JoinGameRoomView.vue'
 import AboutView from '@/views/AboutView.vue'
-import GameVue from '@/views/GameVue.vue'
+import GameRoomVue from '@/views/GameRoomVue.vue'
 
 const routes = [
   {
@@ -12,14 +12,14 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/create-game',
-    name: 'Create game',
-    component: CreateGameView
+    path: '/create-game-room',
+    name: 'Create a Game Room',
+    component: CreateGameRoomView
   },
   {
-    path: '/join-game',
-    name: 'Join game',
-    component: JoinGameView
+    path: '/join-game-room',
+    name: 'Join a Game Room',
+    component: JoinGameRoomView
   },
   {
     path: '/about',
@@ -27,9 +27,9 @@ const routes = [
     component: AboutView
   },
   {
-    path: '/game/:id',
-    name: 'Game',
-    component: GameVue
+    path: '/game-room/:id',
+    name: 'Game Room',
+    component: GameRoomVue
   }
 ]
 

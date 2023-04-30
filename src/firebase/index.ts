@@ -13,8 +13,8 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig)
 const db = getFirestore()
 /* do not use these: use entities methods */
-const gamesRef = collection(db, 'games')
+const gameRoomsRef = collection(db, 'game-rooms')
 const playersRef = collection(db, 'players')
 const quizzesRef = collection(db, 'quizzes')
 
-export { firebaseApp, gamesRef, playersRef, quizzesRef }
+export { firebaseApp, gameRoomsRef, playersRef, quizzesRef }

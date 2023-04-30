@@ -1,26 +1,26 @@
 <script lang="ts">
-import JoinGameFromId from '@/components/JoinGame/JoinGameFromId.vue'
-import JoinGameRandom from '@/components/JoinGame/JoinGameRandom.vue'
+import JoinGameRoomFromId from '@/components/JoinGameRoom/JoinGameRoomFromId.vue'
+import JoinGameRoomRandom from '@/components/JoinGameRoom/JoinGameRoomRandom.vue'
 import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  components: { JoinGameFromId, JoinGameRandom, HeaderDefault }
+  components: { JoinGameRoomFromId, JoinGameRoomRandom, HeaderDefault }
 })
 </script>
 
 <template>
-  <div id="join-game">
+  <div id="join-game-room">
     <HeaderDefault />
     <div id="different-join">
-      <JoinGameRandom />
-      <JoinGameFromId />
+      <JoinGameRoomRandom />
+      <JoinGameRoomFromId />
     </div>
   </div>
 </template>
 
 <style scoped>
-#join-game {
+#join-game-room {
   display: flex;
   flex-direction: column;
   height: 100dvh;

@@ -14,8 +14,8 @@ export default defineComponent({
     <main>
       <img src="/src/assets/logo/application.png" alt="application logo" />
       <div id="actions">
-        <router-link class="pseudo-button" to="/create-game">Create a game</router-link>
-        <router-link class="pseudo-button" to="/join-game">Join a game</router-link>
+        <router-link class="pseudo-button" to="/create-game-room">Create a Game Room</router-link>
+        <router-link class="pseudo-button" to="/join-game-room">Join a Game Room</router-link>
         <router-link class="pseudo-button" to="/about">About Us</router-link>
       </div>
     </main>
