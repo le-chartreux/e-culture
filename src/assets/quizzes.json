@@ -187,5 +187,75 @@
       { "answer": "Swansea", "correct": false }
     ],
     "tags": ["geography"]
+  },
+  {
+    "question": "Who wrote the novel '1984', which is considered one of the most important works of dystopian fiction?",
+    "answers": [
+      { "answer": "George Orwell", "correct": true },
+      { "answer": "Aldous Huxley", "correct": false },
+      { "answer": "Ray Bradbury", "correct": false },
+      { "answer": "Margaret Atwood", "correct": false }
+    ],
+    "tags": ["literature"]
+  },
+  {
+    "question": "What is the name of the famous novel by Jane Austen that follows the story of Elizabeth Bennet and Mr. Darcy?",
+    "answers": [
+      { "answer": "Pride and Prejudice", "correct": true },
+      { "answer": "Sense and Sensibility", "correct": false },
+      { "answer": "Emma", "correct": false },
+      { "answer": "Mansfield Park", "correct": false }
+    ],
+    "tags": ["literature"]
+  },
+  {
+    "question": "What is the name of the Nobel Prize-winning British author who wrote the novels 'Lord of the Flies' and 'Rites of Passage'?",
+    "answers": [
+      { "answer": "William Golding", "correct": true },
+      { "answer": "J.K. Rowling", "correct": false },
+      { "answer": "Roald Dahl", "correct": false },
+      { "answer": "Kazuo Ishiguro", "correct": false }
+    ],
+    "tags": ["literature"]
+  },
+  {
+    "question": "What is the name of the famous British children's author who created the character of Peter Rabbit?",
+    "answers": [
+      { "answer": "Beatrix Potter", "correct": true },
+      { "answer": "Lewis Carroll", "correct": false },
+      { "answer": "Enid Blyton", "correct": false },
+      { "answer": "Roald Dahl", "correct": false }
+    ],
+    "tags": ["literature"]
+  },
+  {
+    "question": "What is the name of the famous English poet who wrote the poem 'The Waste Land'?",
+    "answers": [
+      { "answer": "T.S. Eliot", "correct": true },
+      { "answer": "William Wordsworth", "correct": false },
+      { "answer": "Samuel Taylor Coleridge", "correct": false },
+      { "answer": "John Keats", "correct": false }
+    ],
+    "tags": ["literature"]
+  },
+  {
+    "question": "What is the name of the famous English playwright who wrote the plays 'Hamlet', 'Macbeth', and 'Romeo and Juliet'?",
+    "answers": [
+      { "answer": "William Shakespeare", "correct": true },
+      { "answer": "Christopher Marlowe", "correct": false },
+      { "answer": "Ben Jonson", "correct": false },
+      { "answer": "Tom Stoppard", "correct": false }
+    ],
+    "tags": ["literature"]
+  },
+  {
+    "question": "What is the name of the famous Scottish novelist who wrote the novel 'Rob Roy'?",
+    "answers": [
+      { "answer": "Sir Walter Scott", "correct": true },
+      { "answer": "Robert Louis Stevenson", "correct": false },
+      { "answer": "James Hogg", "correct": false },
+      { "answer": "Irvine Welsh", "correct": false }
+    ],
+    "tags": ["literature"]
   }
 ]
