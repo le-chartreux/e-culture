@@ -6,7 +6,7 @@ import { Player } from '@/firebase/entities/Player'
 export default defineComponent({
   data() {
     return {
-      player: Player.loadLocal(),
+      player: Player.loadLocal()
     }
   },
   props: {
@@ -15,7 +15,7 @@ export default defineComponent({
       required: true
     },
     owner: {
-      type: Object as PropType<Player | null >,
+      type: Object as PropType<Player | null>,
       required: true
     }
   }

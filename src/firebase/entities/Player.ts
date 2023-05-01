@@ -69,6 +69,6 @@ export class Player {
   }
 
   equals(other: any): boolean {
-    return (other instanceof Player && this.id === other.id)
+    return other instanceof Player && this.id === other.id
   }
 }

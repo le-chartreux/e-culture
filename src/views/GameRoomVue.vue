@@ -10,8 +10,8 @@ import {
 } from 'firebase/firestore'
 
 import HeaderDefault from '@/components/Header/HeaderDefault.vue'
-import GameRoomQuiz from "@/components/GameRoom/GameRoomQuiz.vue";
-import GameRoomWaiting from "@/components/GameRoom/GameRoomWaiting.vue";
+import GameRoomQuiz from '@/components/GameRoom/GameRoomQuiz.vue'
+import GameRoomWaiting from '@/components/GameRoom/GameRoomWaiting.vue'
 import PlayersList from '@/components/PlayersList.vue'
 import { GameRoom } from '@/firebase/entities/GameRoom'
 import { Player } from '@/firebase/entities/Player'
@@ -70,8 +70,8 @@ export default defineComponent({
       <div v-if="gameRoom">
         <p>Players in this Game Room:</p>
         <PlayersList :players="gameRoom.players" :owner="gameRoom.owner"></PlayersList>
-        <GameRoomQuiz v-if="gameRoom.started" :game-room="gameRoom"/>
-        <GameRoomWaiting v-else :game-room="gameRoom"/>
+        <GameRoomQuiz v-if="gameRoom.started" :game-room="gameRoom" />
+        <GameRoomWaiting v-else :game-room="gameRoom" />
       </div>
       <div v-else>
         <p>Acquiring game room data...</p>

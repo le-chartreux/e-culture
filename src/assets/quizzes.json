@@ -52,7 +52,10 @@
   {
     "question": "What event led to the Glorious Revolution in England?",
     "answers": [
-      { "answer": "The deposition of King James II and the accession of William and Mary", "correct": true },
+      {
+        "answer": "The deposition of King James II and the accession of William and Mary",
+        "correct": true
+      },
       { "answer": "The English Civil War", "correct": false },
       { "answer": "The signing of the Magna Carta", "correct": false },
       { "answer": "The Battle of Trafalgar", "correct": false }

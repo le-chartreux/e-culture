@@ -2,7 +2,7 @@ import { doc, DocumentReference, DocumentSnapshot, getDoc } from 'firebase/fires
 
 import { Player } from '@/firebase/entities/Player'
 import { gameRoomsRef } from '@/firebase'
-import { Game } from "@/firebase/entities/Game";
+import { Game } from '@/firebase/entities/Game'
 
 export class GameRoom {
   id: string
