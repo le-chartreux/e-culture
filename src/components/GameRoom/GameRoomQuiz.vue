@@ -30,7 +30,6 @@ export default defineComponent({
 
 <template>
   <p>questions:</p>
-  <p>current quiz : {{}}</p>
   <ul>
     <li v-for="quiz in gameRoom.game.quizzes" :key="quiz.id">
       {{ quiz.question }} <span v-if="currentQuiz.id === quiz.id">CURRENT</span>
