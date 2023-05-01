@@ -327,5 +327,75 @@
       { "answer": "Stephen Frears", "correct": false }
     ],
     "tags": ["art", "movie"]
+  },
+  {
+    "question": "What is the name of the famous annual rowing race that takes place on the River Thames in London?",
+    "answers": [
+      { "answer": "The Boat Race", "correct": true },
+      { "answer": "The Oxford and Cambridge Regatta", "correct": false },
+      { "answer": "The Henley Regatta", "correct": false },
+      { "answer": "The Head of the River Race", "correct": false }
+    ],
+    "tags": ["sport"]
+  },
+  {
+    "question": "What is the name of the famous English rugby team that plays their home games at Twickenham stadium?",
+    "answers": [
+      { "answer": "England national rugby team", "correct": true },
+      { "answer": "Leicester Tigers", "correct": false },
+      { "answer": "Bath Rugby", "correct": false },
+      { "answer": "Harlequins", "correct": false }
+    ],
+    "tags": ["sport"]
+  },
+  {
+    "question": "What is the name of the famous horse racing event that takes place at Aintree racecourse in Liverpool?",
+    "answers": [
+      { "answer": "The Grand National", "correct": true },
+      { "answer": "The Derby", "correct": false },
+      { "answer": "Royal Ascot", "correct": false },
+      { "answer": "Cheltenham Festival", "correct": false }
+    ],
+    "tags": ["sport"]
+  },
+  {
+    "question": "What is the name of the famous English football stadium that is also known as the 'Theatre of Dreams'?",
+    "answers": [
+      { "answer": "Old Trafford", "correct": true },
+      { "answer": "Anfield", "correct": false },
+      { "answer": "Emirates Stadium", "correct": false },
+      { "answer": "Wembley Stadium", "correct": false }
+    ],
+    "tags": ["sport"]
+  },
+  {
+    "question": "What is the name of the famous English tennis tournament that takes place at the All England Lawn Tennis and Croquet Club in Wimbledon?",
+    "answers": [
+      { "answer": "Wimbledon", "correct": true },
+      { "answer": "US Open", "correct": false },
+      { "answer": "French Open", "correct": false },
+      { "answer": "Australian Open", "correct": false }
+    ],
+    "tags": ["sport"]
+  },
+  {
+    "question": "What is the name of the famous English footballer who is widely regarded as one of the greatest players of all time and played for Manchester United and the England national team?",
+    "answers": [
+      { "answer": "David Beckham", "correct": false },
+      { "answer": "Wayne Rooney", "correct": true },
+      { "answer": "Alan Shearer", "correct": false },
+      { "answer": "Gary Lineker", "correct": false }
+    ],
+    "tags": ["sport"]
+  },
+  {
+    "question": "What is the name of the famous English boxer who is widely regarded as one of the greatest heavyweight boxers of all time?",
+    "answers": [
+      { "answer": "Tyson Fury", "correct": false },
+      { "answer": "Anthony Joshua", "correct": false },
+      { "answer": "Lennox Lewis", "correct": true },
+      { "answer": "Frank Bruno", "correct": false }
+    ],
+    "tags": ["sport"]
   }
 ]
