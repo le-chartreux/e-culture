@@ -67,4 +67,8 @@ export class Player {
       throw Error(`Impossible to create Player from ${snapshot}: pseudo not in data.`)
     }
   }
+
+  equals(other: any): boolean {
+    return (other instanceof Player && this.id === other.id)
+  }
 }
