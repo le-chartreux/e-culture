@@ -97,5 +97,77 @@
       { "answer": "The Nina", "correct": false },
       { "answer": "The Pinta", "correct": false }
     ]
+  },
+  {
+    "question": "What is the highest mountain in the UK?",
+    "answers": [
+      { "answer": "Ben Nevis", "correct": true },
+      { "answer": "Snowdon", "correct": false },
+      { "answer": "Scafell Pike", "correct": false },
+      { "answer": "Slieve Donard", "correct": false }
+    ]
+  },
+  {
+    "question": "What is the longest river in the UK?",
+    "answers": [
+      { "answer": "River Severn", "correct": true },
+      { "answer": "River Thames", "correct": false },
+      { "answer": "River Tay", "correct": false },
+      { "answer": "River Spey", "correct": false }
+    ]
+  },
+  {
+    "question": "What is the largest lake in the UK?",
+    "answers": [
+      { "answer": "Loch Lomond", "correct": true },
+      { "answer": "Lake Windermere", "correct": false },
+      { "answer": "Loch Ness", "correct": false },
+      { "answer": "Lough Neagh", "correct": false }
+    ]
+  },
+  {
+    "question": "What is the name of the famous prehistoric monument located in Wiltshire, England?",
+    "answers": [
+      { "answer": "Stonehenge", "correct": true },
+      { "answer": "Avebury", "correct": false },
+      { "answer": "The Cerne Abbas Giant", "correct": false },
+      { "answer": "The Rollright Stones", "correct": false }
+    ]
+  },
+  {
+    "question": "What is the highest waterfall in the UK?",
+    "answers": [
+      { "answer": "Eas a' Chual Aluinn", "correct": true },
+      { "answer": "Sgwd Ddu", "correct": false },
+      { "answer": "Hardraw Force", "correct": false },
+      { "answer": "High Force", "correct": false }
+    ]
+  },
+  {
+    "question": "What is the name of the highest village in Scotland?",
+    "answers": [
+      { "answer": "Wanlockhead", "correct": true },
+      { "answer": "Tomintoul", "correct": false },
+      { "answer": "Braemar", "correct": false },
+      { "answer": "Aviemore", "correct": false }
+    ]
+  },
+  {
+    "question": "What is the name of the peninsula in southwestern England that is famous for its beaches and surf culture?",
+    "answers": [
+      { "answer": "Cornwall", "correct": true },
+      { "answer": "Devon", "correct": false },
+      { "answer": "Dorset", "correct": false },
+      { "answer": "Isle of Wight", "correct": false }
+    ]
+  },
+  {
+    "question": "What is the name of the highest mountain in Wales?",
+    "answers": [
+      { "answer": "Snowdon", "correct": true },
+      { "answer": "Cader Idris", "correct": false },
+      { "answer": "Pen y Fan", "correct": false },
+      { "answer": "Tryfan", "correct": false }
+    ]
   }
 ]
