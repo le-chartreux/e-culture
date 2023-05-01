@@ -51,7 +51,9 @@ export class Game {
     if (this.started && !this.ended) {
       return this.quizzes[this.indexCurrentQuiz]
     } else {
-      throw Error("Impossible to get the current quiz: the game haven't started or has already ended.")
+      throw Error(
+        "Impossible to get the current quiz: the game haven't started or has already ended."
+      )
     }
   }
 
@@ -63,7 +65,6 @@ export class Game {
     } else {
       throw Error("Impossible to calculate the index of the current quiz: the game haven't started")
     }
-
   }
 
   get started(): boolean {
@@ -73,5 +74,4 @@ export class Game {
   get ended(): boolean {
     return this.started && this.indexCurrentQuiz + 1 > Game.NUMBER_OF_QUIZZES
   }
-
 }

@@ -15,8 +15,8 @@ export default defineComponent({
     }
   },
   methods: {
-    updateLoopCurrentQuiz(){
-      if (! this.gameRoom.game.ended){
+    updateLoopCurrentQuiz() {
+      if (!this.gameRoom.game.ended) {
         this.currentQuiz = this.gameRoom.game.currentQuiz
         setTimeout(this.updateLoopCurrentQuiz, 100)
       }

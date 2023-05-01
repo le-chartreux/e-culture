@@ -1,10 +1,10 @@
 <script lang="ts">
-import { defineComponent, type PropType } from "vue";
+import { defineComponent, type PropType } from 'vue'
 
-import GameRoomWaiting from "@/components/GameRoom/GameRoomWaiting.vue";
-import PlayersList from "@/components/PlayersList.vue";
-import GameRoomQuiz from "@/components/GameRoom/GameRoomQuiz.vue";
-import type { GameRoom } from "@/firebase/entities/GameRoom";
+import GameRoomWaiting from '@/components/GameRoom/GameRoomWaiting.vue'
+import PlayersList from '@/components/PlayersList.vue'
+import GameRoomQuiz from '@/components/GameRoom/GameRoomQuiz.vue'
+import type { GameRoom } from '@/firebase/entities/GameRoom'
 
 export default defineComponent({
   data() {
@@ -31,7 +31,7 @@ export default defineComponent({
     updateLoopGameEnded() {
       // since it's computed, we have to update it with timeout to track it
       this.gameEnded = this.gameRoom.game.ended
-      if (! this.gameEnded) {
+      if (!this.gameEnded) {
         setTimeout(() => this.updateLoopGameEnded(), 100)
       }
     }
@@ -40,13 +40,13 @@ export default defineComponent({
     this.updateLoopGameEnded()
   },
   components: { GameRoomQuiz, PlayersList, GameRoomWaiting }
-});
+})
 </script>
 
 <template>
   <p>Players in this Game Room:</p>
   <PlayersList :players="gameRoom.players" :owner="gameRoom.owner"></PlayersList>
   <p v-if="gameEnded">game ended</p>
-  <GameRoomQuiz v-else-if="gameRoom.game.started" :game-room="gameRoom"/>
-  <GameRoomWaiting v-else :game-room="gameRoom"/>
+  <GameRoomQuiz v-else-if="gameRoom.game.started" :game-room="gameRoom" />
+  <GameRoomWaiting v-else :game-room="gameRoom" />
 </template>

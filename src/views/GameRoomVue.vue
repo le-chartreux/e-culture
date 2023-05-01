@@ -12,7 +12,7 @@ import {
 import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 import { GameRoom } from '@/firebase/entities/GameRoom'
 import { Player } from '@/firebase/entities/Player'
-import GameRoomContent from "@/components/GameRoom/GameRoomContent.vue";
+import GameRoomContent from '@/components/GameRoom/GameRoomContent.vue'
 
 export default defineComponent({
   data() {
@@ -65,7 +65,7 @@ export default defineComponent({
     <HeaderDefault />
     <div id="game-room-information">
       <h2>Game Room {{ gameRoomId }}</h2>
-      <GameRoomContent v-if="gameRoom" :game-room="gameRoom"/>
+      <GameRoomContent v-if="gameRoom" :game-room="gameRoom" />
       <p v-else>Acquiring game room data...</p>
     </div>
   </div>
