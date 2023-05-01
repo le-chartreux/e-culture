@@ -12,7 +12,7 @@ export default defineComponent({
     <HeaderDefault />
 
     <main>
-      <img src="/src/assets/logo/application.png" alt="application logo" />
+      <img src="/logo/application.png" alt="application logo" />
       <div id="actions">
         <router-link class="pseudo-button" to="/create-game-room">Create a Game Room</router-link>
         <router-link class="pseudo-button" to="/join-game-room">Join a Game Room</router-link>
@@ -21,7 +21,7 @@ export default defineComponent({
     </main>
 
     <footer>
-      <img src="/src/assets/logo/company.png" alt="company logo" />
+      <img src="/logo/company.png" alt="company logo" />
     </footer>
   </div>
 </template>

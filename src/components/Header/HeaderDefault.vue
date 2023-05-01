@@ -10,7 +10,7 @@ export default defineComponent({
 <template>
   <header>
     <router-link to="/"
-      ><img src="/src/assets/logo/application-without-text.png" alt="application logo"
+      ><img src="/logo/application-without-text.png" alt="application logo"
     /></router-link>
     <UserInfoSmall />
   </header>
