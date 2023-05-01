@@ -6,7 +6,8 @@
       { "answer": "Richard the Lionheart", "correct": false },
       { "answer": "Henry II", "correct": false },
       { "answer": "Edward the Confessor", "correct": false }
-    ]
+    ],
+    "tags": ["history"]
   },
   {
     "question": "Which battle marked the end of the Anglo-Saxon era and the beginning of Norman rule in England?",
@@ -15,7 +16,8 @@
       { "answer": "The Battle of Stamford Bridge", "correct": false },
       { "answer": "The Battle of Bosworth Field", "correct": false },
       { "answer": "The Battle of Agincourt", "correct": false }
-    ]
+    ],
+    "tags": ["history"]
   },
   {
     "question": "Who was the first Tudor monarch of England?",
@@ -24,7 +26,8 @@
       { "answer": "Edward VI", "correct": false },
       { "answer": "Mary I", "correct": false },
       { "answer": "Elizabeth I", "correct": false }
-    ]
+    ],
+    "tags": ["history"]
   },
   {
     "question": "What was the cause of the English Civil War?",
@@ -33,7 +36,8 @@
       { "answer": "A rebellion against foreign rule", "correct": false },
       { "answer": "A dispute over religious freedom", "correct": false },
       { "answer": "A conflict over trade agreements", "correct": false }
-    ]
+    ],
+    "tags": ["history"]
   },
   {
     "question": "Who was the last monarch of the House of Stuart?",
@@ -42,7 +46,8 @@
       { "answer": "King James II", "correct": false },
       { "answer": "King Charles I", "correct": false },
       { "answer": "King William III", "correct": false }
-    ]
+    ],
+    "tags": ["history"]
   },
   {
     "question": "What event led to the Glorious Revolution in England?",
@@ -51,7 +56,8 @@
       { "answer": "The English Civil War", "correct": false },
       { "answer": "The signing of the Magna Carta", "correct": false },
       { "answer": "The Battle of Trafalgar", "correct": false }
-    ]
+    ],
+    "tags": ["history"]
   },
   {
     "question": "Who was the first English monarch to be beheaded?",
@@ -60,7 +66,8 @@
       { "answer": "King Edward I", "correct": false },
       { "answer": "King Henry VIII", "correct": false },
       { "answer": "King Richard III", "correct": false }
-    ]
+    ],
+    "tags": ["history"]
   },
   {
     "question": "What was the name of the ship that carried the Pilgrims to the New World?",
@@ -69,7 +76,8 @@
       { "answer": "The Santa Maria", "correct": false },
       { "answer": "The Nina", "correct": false },
       { "answer": "The Pinta", "correct": false }
-    ]
+    ],
+    "tags": ["history"]
   },
   {
     "question": "What is the highest mountain in the UK?",
@@ -78,7 +86,8 @@
       { "answer": "Snowdon", "correct": false },
       { "answer": "Scafell Pike", "correct": false },
       { "answer": "Slieve Donard", "correct": false }
-    ]
+    ],
+    "tags": ["geography"]
   },
   {
     "question": "What is the longest river in the UK?",
@@ -87,7 +96,8 @@
       { "answer": "River Thames", "correct": false },
       { "answer": "River Tay", "correct": false },
       { "answer": "River Spey", "correct": false }
-    ]
+    ],
+    "tags": ["geography"]
   },
   {
     "question": "What is the largest lake in the UK?",
@@ -105,7 +115,8 @@
       { "answer": "Avebury", "correct": false },
       { "answer": "The Cerne Abbas Giant", "correct": false },
       { "answer": "The Rollright Stones", "correct": false }
-    ]
+    ],
+    "tags": ["geography"]
   },
   {
     "question": "What is the highest waterfall in the UK?",
@@ -114,7 +125,8 @@
       { "answer": "Sgwd Ddu", "correct": false },
       { "answer": "Hardraw Force", "correct": false },
       { "answer": "High Force", "correct": false }
-    ]
+    ],
+    "tags": ["geography"]
   },
   {
     "question": "What is the name of the highest village in Scotland?",
@@ -123,7 +135,8 @@
       { "answer": "Tomintoul", "correct": false },
       { "answer": "Braemar", "correct": false },
       { "answer": "Aviemore", "correct": false }
-    ]
+    ],
+    "tags": ["geography"]
   },
   {
     "question": "What is the name of the peninsula in southwestern England that is famous for its beaches and surf culture?",
@@ -132,7 +145,8 @@
       { "answer": "Devon", "correct": false },
       { "answer": "Dorset", "correct": false },
       { "answer": "Isle of Wight", "correct": false }
-    ]
+    ],
+    "tags": ["geography"]
   },
   {
     "question": "What is the name of the highest mountain in Wales?",
@@ -141,7 +155,8 @@
       { "answer": "Cader Idris", "correct": false },
       { "answer": "Pen y Fan", "correct": false },
       { "answer": "Tryfan", "correct": false }
-    ]
+    ],
+    "tags": ["geography"]
   },
   {
     "question": "What is the capital of the United Kingdom?",
@@ -150,7 +165,8 @@
       { "answer": "Paris", "correct": false },
       { "answer": "Birmingham", "correct": false },
       { "answer": "Manchester", "correct": false }
-    ]
+    ],
+    "tags": ["geography"]
   },
   {
     "question": "How many inhabited islands belong to the United Kingdom?",
@@ -159,7 +175,8 @@
       { "answer": "17", "correct": false },
       { "answer": "73", "correct": false },
       { "answer": "214", "correct": false }
-    ]
+    ],
+    "tags": ["geography"]
   },
   {
     "question": "Which of those city names is NOT in the United Kingdom?",
@@ -168,6 +185,7 @@
       { "answer": "Belfast", "correct": false },
       { "answer": "Glasgow", "correct": false },
       { "answer": "Swansea", "correct": false }
-    ]
+    ],
+    "tags": ["geography"]
   }
 ]
