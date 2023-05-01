@@ -196,7 +196,7 @@
       { "answer": "Ray Bradbury", "correct": false },
       { "answer": "Margaret Atwood", "correct": false }
     ],
-    "tags": ["literature"]
+    "tags": ["art", "literature"]
   },
   {
     "question": "What is the name of the famous novel by Jane Austen that follows the story of Elizabeth Bennet and Mr. Darcy?",
@@ -206,7 +206,7 @@
       { "answer": "Emma", "correct": false },
       { "answer": "Mansfield Park", "correct": false }
     ],
-    "tags": ["literature"]
+    "tags": ["art", "literature"]
   },
   {
     "question": "What is the name of the Nobel Prize-winning British author who wrote the novels 'Lord of the Flies' and 'Rites of Passage'?",
@@ -216,7 +216,7 @@
       { "answer": "Roald Dahl", "correct": false },
       { "answer": "Kazuo Ishiguro", "correct": false }
     ],
-    "tags": ["literature"]
+    "tags": ["art", "literature"]
   },
   {
     "question": "What is the name of the famous British children's author who created the character of Peter Rabbit?",
@@ -226,7 +226,7 @@
       { "answer": "Enid Blyton", "correct": false },
       { "answer": "Roald Dahl", "correct": false }
     ],
-    "tags": ["literature"]
+    "tags": ["art", "literature"]
   },
   {
     "question": "What is the name of the famous English poet who wrote the poem 'The Waste Land'?",
@@ -236,7 +236,7 @@
       { "answer": "Samuel Taylor Coleridge", "correct": false },
       { "answer": "John Keats", "correct": false }
     ],
-    "tags": ["literature"]
+    "tags": ["art", "literature"]
   },
   {
     "question": "What is the name of the famous English playwright who wrote the plays 'Hamlet', 'Macbeth', and 'Romeo and Juliet'?",
@@ -246,7 +246,7 @@
       { "answer": "Ben Jonson", "correct": false },
       { "answer": "Tom Stoppard", "correct": false }
     ],
-    "tags": ["literature"]
+    "tags": ["art", "literature"]
   },
   {
     "question": "What is the name of the famous Scottish novelist who wrote the novel 'Rob Roy'?",
@@ -256,6 +256,76 @@
       { "answer": "James Hogg", "correct": false },
       { "answer": "Irvine Welsh", "correct": false }
     ],
-    "tags": ["literature"]
+    "tags": ["art", "literature"]
+  },
+  {
+    "question": "What is the name of the famous British artist known for his vivid, colorful paintings of landscapes and portraits?",
+    "answers": [
+      { "answer": "David Hockney", "correct": true },
+      { "answer": "Banksy", "correct": false },
+      { "answer": "Tracey Emin", "correct": false },
+      { "answer": "Damien Hirst", "correct": false }
+    ],
+    "tags": ["art", "painting"]
+  },
+  {
+    "question": "What is the name of the famous British sculptor known for his abstract, modernist sculptures?",
+    "answers": [
+      { "answer": "Henry Moore", "correct": true },
+      { "answer": "Barbara Hepworth", "correct": false },
+      { "answer": "Anish Kapoor", "correct": false },
+      { "answer": "Rachel Whiteread", "correct": false }
+    ],
+    "tags": ["art", "painting"]
+  },
+  {
+    "question": "What is the name of the famous British fashion designer who created the iconic punk fashion style?",
+    "answers": [
+      { "answer": "Vivienne Westwood", "correct": true },
+      { "answer": "Alexander McQueen", "correct": false },
+      { "answer": "Stella McCartney", "correct": false },
+      { "answer": "Mary Quant", "correct": false }
+    ],
+    "tags": ["art", "fashion"]
+  },
+  {
+    "question": "What is the name of the famous British architect who designed the iconic 'Gherkin' building in London?",
+    "answers": [
+      { "answer": "Norman Foster", "correct": true },
+      { "answer": "Richard Rogers", "correct": false },
+      { "answer": "Zaha Hadid", "correct": false },
+      { "answer": "David Chipperfield", "correct": false }
+    ],
+    "tags": ["art", "architecture"]
+  },
+  {
+    "question": "What is the name of the famous British composer who wrote the music for 'The Planets' and 'Jupiter'?",
+    "answers": [
+      { "answer": "Gustav Holst", "correct": true },
+      { "answer": "Benjamin Britten", "correct": false },
+      { "answer": "Edward Elgar", "correct": false },
+      { "answer": "Ralph Vaughan Williams", "correct": false }
+    ],
+    "tags": ["art", "music"]
+  },
+  {
+    "question": "What is the name of the famous British theater director who founded the Royal Shakespeare Company?",
+    "answers": [
+      { "answer": "Peter Hall", "correct": true },
+      { "answer": "Trevor Nunn", "correct": false },
+      { "answer": "Sam Mendes", "correct": false },
+      { "answer": "Michael Grandage", "correct": false }
+    ],
+    "tags": ["art", "theater"]
+  },
+  {
+    "question": "What is the name of the famous British film director who directed 'Trainspotting' and 'Slumdog Millionaire'?",
+    "answers": [
+      { "answer": "Danny Boyle", "correct": true },
+      { "answer": "Mike Leigh", "correct": false },
+      { "answer": "Ken Loach", "correct": false },
+      { "answer": "Stephen Frears", "correct": false }
+    ],
+    "tags": ["art", "movie"]
   }
 ]
