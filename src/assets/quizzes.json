@@ -25,5 +25,77 @@
       { "answer": "Glasgow", "correct": false },
       { "answer": "Swansea", "correct": false }
     ]
+  },
+  {
+    "question": "Which king was responsible for the Norman Conquest of England?",
+    "answers": [
+      { "answer": "William the Conqueror", "correct": true },
+      { "answer": "Richard the Lionheart", "correct": false },
+      { "answer": "Henry II", "correct": false },
+      { "answer": "Edward the Confessor", "correct": false }
+    ]
+  },
+  {
+    "question": "Which battle marked the end of the Anglo-Saxon era and the beginning of Norman rule in England?",
+    "answers": [
+      { "answer": "The Battle of Hastings", "correct": true },
+      { "answer": "The Battle of Stamford Bridge", "correct": false },
+      { "answer": "The Battle of Bosworth Field", "correct": false },
+      { "answer": "The Battle of Agincourt", "correct": false }
+    ]
+  },
+  {
+    "question": "Who was the first Tudor monarch of England?",
+    "answers": [
+      { "answer": "Henry VII", "correct": true },
+      { "answer": "Edward VI", "correct": false },
+      { "answer": "Mary I", "correct": false },
+      { "answer": "Elizabeth I", "correct": false }
+    ]
+  },
+  {
+    "question": "What was the cause of the English Civil War?",
+    "answers": [
+      { "answer": "A struggle for power between the King and Parliament", "correct": true },
+      { "answer": "A rebellion against foreign rule", "correct": false },
+      { "answer": "A dispute over religious freedom", "correct": false },
+      { "answer": "A conflict over trade agreements", "correct": false }
+    ]
+  },
+  {
+    "question": "Who was the last monarch of the House of Stuart?",
+    "answers": [
+      { "answer": "Queen Anne", "correct": true },
+      { "answer": "King James II", "correct": false },
+      { "answer": "King Charles I", "correct": false },
+      { "answer": "King William III", "correct": false }
+    ]
+  },
+  {
+    "question": "What event led to the Glorious Revolution in England?",
+    "answers": [
+      { "answer": "The deposition of King James II and the accession of William and Mary", "correct": true },
+      { "answer": "The English Civil War", "correct": false },
+      { "answer": "The signing of the Magna Carta", "correct": false },
+      { "answer": "The Battle of Trafalgar", "correct": false }
+    ]
+  },
+  {
+    "question": "Who was the first English monarch to be beheaded?",
+    "answers": [
+      { "answer": "King Charles I", "correct": true },
+      { "answer": "King Edward I", "correct": false },
+      { "answer": "King Henry VIII", "correct": false },
+      { "answer": "King Richard III", "correct": false }
+    ]
+  },
+  {
+    "question": "What was the name of the ship that carried the Pilgrims to the New World?",
+    "answers": [
+      { "answer": "The Mayflower", "correct": true },
+      { "answer": "The Santa Maria", "correct": false },
+      { "answer": "The Nina", "correct": false },
+      { "answer": "The Pinta", "correct": false }
+    ]
   }
 ]
