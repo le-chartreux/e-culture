@@ -7,14 +7,12 @@ import { Game } from '@/firebase/entities/Game'
 export class GameRoom {
   id: string
   players: Player[]
-  startTime: Date | null
   game: Game
 
   constructor(id: string, players: Player[], startTime: Date | null) {
     this.id = id
     this.players = players
-    this.startTime = startTime
-    this.game = Game.fromStringSeed(this.id, 10)
+    this.game = Game.fromStringSeed(this.id, startTime)
   }
 
   get owner(): Player | null {
@@ -55,9 +53,5 @@ export class GameRoom {
 
   static getRef(id: string): DocumentReference {
     return doc(gameRoomsRef, id)
-  }
-
-  get started(): boolean {
-    return this.startTime !== null
   }
 }

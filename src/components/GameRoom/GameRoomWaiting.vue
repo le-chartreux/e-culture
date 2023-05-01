@@ -26,7 +26,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <button class="pseudo-button" v-if="gameRoom?.isOwner(player)" @click="startGame">
+  <button class="pseudo-button" v-if="gameRoom.isOwner(player)" @click="startGame">
     Start game
   </button>
   <p v-else>Waiting for the owner to start the game...</p>

@@ -1,12 +1,11 @@
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue'
-import { Player } from '@/firebase/entities/Player'
 import type { GameRoom } from '@/firebase/entities/GameRoom'
 
 export default defineComponent({
   data() {
     return {
-      player: Player.loadLocal()
+      currentQuiz: this.gameRoom.game.currentQuiz
     }
   },
   props: {
@@ -14,13 +13,27 @@ export default defineComponent({
       type: Object as PropType<GameRoom>,
       required: true
     }
+  },
+  methods: {
+    updateLoopCurrentQuiz(){
+      if (! this.gameRoom.game.ended){
+        this.currentQuiz = this.gameRoom.game.currentQuiz
+        setTimeout(this.updateLoopCurrentQuiz, 100)
+      }
+    }
+  },
+  mounted() {
+    this.updateLoopCurrentQuiz()
   }
 })
 </script>
 
 <template>
   <p>questions:</p>
+  <p>current quiz : {{}}</p>
   <ul>
-    <li v-for="quiz in gameRoom.game.quizzes" :key="quiz.id">{{ quiz.question }}</li>
+    <li v-for="quiz in gameRoom.game.quizzes" :key="quiz.id">
+      {{ quiz.question }} <span v-if="currentQuiz.id === quiz.id">CURRENT</span>
+    </li>
   </ul>
 </template>
