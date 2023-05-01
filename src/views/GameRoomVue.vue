@@ -10,6 +10,8 @@ import {
 } from 'firebase/firestore'
 
 import HeaderDefault from '@/components/Header/HeaderDefault.vue'
+import GameRoomQuiz from "@/components/GameRoom/GameRoomQuiz.vue";
+import GameRoomWaiting from "@/components/GameRoom/GameRoomWaiting.vue";
 import PlayersList from '@/components/PlayersList.vue'
 import { GameRoom } from '@/firebase/entities/GameRoom'
 import { Player } from '@/firebase/entities/Player'
@@ -23,7 +25,7 @@ export default defineComponent({
       unSubscribeGameRoom: null as null | Unsubscribe
     }
   },
-  components: { HeaderDefault, PlayersList },
+  components: { HeaderDefault, PlayersList, GameRoomQuiz, GameRoomWaiting },
   methods: {
     async setGameRoom() {
       this.gameRoom = await GameRoom.loadServerFromId(this.gameRoomId)
@@ -65,10 +67,14 @@ export default defineComponent({
     <HeaderDefault />
     <div id="game-room-information">
       <h2>Game Room {{ gameRoomId }}</h2>
-      <p>Waiting for the game to start...</p>
       <div v-if="gameRoom">
         <p>Players in this Game Room:</p>
-        <PlayersList :players="gameRoom.players"></PlayersList>
+        <PlayersList :players="gameRoom.players" :owner="gameRoom.owner"></PlayersList>
+        <GameRoomQuiz v-if="gameRoom.started" :game-room="gameRoom"/>
+        <GameRoomWaiting v-else :game-room="gameRoom"/>
+      </div>
+      <div v-else>
+        <p>Acquiring game room data...</p>
       </div>
     </div>
   </div>
