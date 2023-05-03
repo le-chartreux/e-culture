@@ -25,7 +25,7 @@ export class GameRoom {
   }
 
   getScore(player: Player): Score | null {
-    return this.scores.find(score =>  score.player.equals(player)) || null
+    return this.scores.find((score) => score.player.equals(player)) || null
   }
 
   static async loadServerFromId(id: string): Promise<GameRoom> {

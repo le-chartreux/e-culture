@@ -54,7 +54,7 @@ export class Player {
   saveServer(): void {
     setDoc(this.ref, this.doc)
       .then(() => console.debug(`Player ${this} saved on firestore.`))
-      .catch(reason => console.error(`Player ${this} not saved on firestore: ${reason}.`))
+      .catch((reason) => console.error(`Player ${this} not saved on firestore: ${reason}.`))
   }
 
   static loadFromSnapshot(snapshot: DocumentSnapshot): Player {

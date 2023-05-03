@@ -1,11 +1,11 @@
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue'
-import { updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
+import { updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore'
 
 import type { GameRoom } from '@/firebase/entities/GameRoom'
-import GameRoomPlayingQuiz from "@/components/GameRoom/GameRoomPlaying/GameRoomPlayingQuiz.vue";
-import type { QuizAnswer } from "@/firebase/entities/QuizAnswer";
-import { Player } from "@/firebase/entities/Player";
+import GameRoomPlayingQuiz from '@/components/GameRoom/GameRoomPlaying/GameRoomPlayingQuiz.vue'
+import type { QuizAnswer } from '@/firebase/entities/QuizAnswer'
+import { Player } from '@/firebase/entities/Player'
 
 export default defineComponent({
   data() {
@@ -41,10 +41,10 @@ export default defineComponent({
   mounted() {
     this.updateLoopCurrentQuiz()
   },
-  components: {GameRoomPlayingQuiz}
+  components: { GameRoomPlayingQuiz }
 })
 </script>
 
 <template>
-  <GameRoomPlayingQuiz :quiz="currentQuiz" @answer-selected="sendAnswer"/>
+  <GameRoomPlayingQuiz :quiz="currentQuiz" @answer-selected="sendAnswer" />
 </template>

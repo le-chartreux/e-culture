@@ -2,7 +2,7 @@
 import { updateDoc } from 'firebase/firestore'
 import { defineComponent, type PropType } from 'vue'
 
-import PlayersList from "@/components/PlayersList.vue";
+import PlayersList from '@/components/PlayersList.vue'
 import { Player } from '@/firebase/entities/Player'
 import type { GameRoom } from '@/firebase/entities/GameRoom'
 
