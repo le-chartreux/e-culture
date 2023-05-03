@@ -28,5 +28,10 @@ body {
 }
 
 .pseudo-button:hover {
+  background: var(--color-background);
   border: solid var(--color-border-hover) 2px;
+}
+
+.pseudo-button:focus {
+  background: var(--color-background-focus);
 }
