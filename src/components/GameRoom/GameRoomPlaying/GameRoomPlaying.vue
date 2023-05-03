@@ -1,15 +1,17 @@
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue'
-import { updateDoc } from 'firebase/firestore';
+import { updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
 
 import type { GameRoom } from '@/firebase/entities/GameRoom'
 import GameRoomPlayingQuiz from "@/components/GameRoom/GameRoomPlaying/GameRoomPlayingQuiz.vue";
 import type { QuizAnswer } from "@/firebase/entities/QuizAnswer";
+import { Player } from "@/firebase/entities/Player";
 
 export default defineComponent({
   data() {
     return {
-      currentQuiz: this.gameRoom.game.currentQuiz
+      currentQuiz: this.gameRoom.game.currentQuiz,
+      player: Player.loadLocal()
     }
   },
   props: {
@@ -26,12 +28,13 @@ export default defineComponent({
       }
     },
     async sendAnswer(answer: QuizAnswer) {
-      alert('answer sended')
       if (answer.correct) {
-        await updateDoc(
-          this.gameRoom.ref,
-          {}
-        )
+        const score = this.gameRoom.getScore(this.player)
+        if (score) {
+          await updateDoc(this.gameRoom.ref, { scores: arrayRemove(score.doc) })
+          score.addGoodAnswer()
+          await updateDoc(this.gameRoom.ref, { scores: arrayUnion(score.doc) })
+        }
       }
     }
   },

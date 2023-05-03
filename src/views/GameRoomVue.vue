@@ -10,9 +10,10 @@ import {
 } from 'firebase/firestore'
 
 import HeaderDefault from '@/components/Header/HeaderDefault.vue'
+import GameRoomContent from '@/components/GameRoom/GameRoomContent.vue'
 import { GameRoom } from '@/firebase/entities/GameRoom'
 import { Player } from '@/firebase/entities/Player'
-import GameRoomContent from '@/components/GameRoom/GameRoomContent.vue'
+import { Score } from "@/firebase/entities/Score";
 
 export default defineComponent({
   data() {
@@ -42,10 +43,16 @@ export default defineComponent({
       }
     },
     async joinGameRoom() {
-      await updateDoc(GameRoom.getRef(this.gameRoomId), { players: arrayUnion(this.player.ref) })
+      await updateDoc(
+        GameRoom.getRef(this.gameRoomId),
+        { scores: arrayUnion({ player: this.player.ref, points: 0 }) }
+      )
     },
     async quitGameRoom() {
-      await updateDoc(GameRoom.getRef(this.gameRoomId), { players: arrayRemove(this.player.ref) })
+      if (this.gameRoom) {
+        const score = this.gameRoom.getScore(this.player) || new Score(0, this.player)
+        await updateDoc(this.gameRoom.ref, { scores: arrayRemove(score.doc) })
+      }
     }
   },
   mounted() {

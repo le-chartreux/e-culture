@@ -1,26 +1,31 @@
 import { doc, DocumentReference, DocumentSnapshot, getDoc } from 'firebase/firestore'
 
-import { Player } from '@/firebase/entities/Player'
+import { Score } from '@/firebase/entities/Score'
 import { gameRoomsRef } from '@/firebase'
 import { Game } from '@/firebase/entities/Game'
+import { Player } from '@/firebase/entities/Player'
 
 export class GameRoom {
   id: string
-  players: Player[]
+  scores: Score[]
   game: Game
 
-  constructor(id: string, players: Player[], startTime: Date | null) {
+  constructor(id: string, scores: Score[], startTime: Date | null) {
     this.id = id
-    this.players = players
+    this.scores = scores
     this.game = Game.fromStringSeed(this.id, startTime)
   }
 
   get owner(): Player | null {
-    return this.players[0] || null
+    return this.scores[0].player || null
   }
 
   isOwner(player: Player): boolean {
     return player.equals(this.owner)
+  }
+
+  getScore(player: Player): Score | null {
+    return this.scores.find(score =>  score.player.equals(player)) || null
   }
 
   static async loadServerFromId(id: string): Promise<GameRoom> {
@@ -34,14 +39,17 @@ export class GameRoom {
 
   static async loadServerFromSnapshot(snapshot: DocumentSnapshot): Promise<GameRoom> {
     const playersPromises: Promise<Player>[] = []
-    const playersRefs = snapshot.data()?.players
     const startTime = snapshot.data()?.startTime || null
-    if (playersRefs instanceof Array) {
-      for (const playerRef of playersRefs) {
-        playersPromises.push(Player.loadServerFromRef(playerRef))
+    const scoresWithPlayerRef = snapshot.data()?.scores
+    if (scoresWithPlayerRef instanceof Array) {
+      for (const scoreWithPlayerRef of scoresWithPlayerRef) {
+        playersPromises.push(Player.loadServerFromRef(scoreWithPlayerRef.player))
       }
       const players: Player[] = await Promise.all(playersPromises)
-      return new GameRoom(snapshot.id, players, startTime)
+      const scores = scoresWithPlayerRef.map(
+        (scoreWithPlayerRef, index) => new Score(scoreWithPlayerRef.points, players[index])
+      )
+      return new GameRoom(snapshot.id, scores, startTime)
     } else {
       throw Error(`Impossible to get GameRoom from snapshot ${snapshot}: no data.`)
     }
@@ -53,5 +61,9 @@ export class GameRoom {
 
   static getRef(id: string): DocumentReference {
     return doc(gameRoomsRef, id)
+  }
+
+  get players(): Player[] {
+    return this.scores.map((score) => score.player)
   }
 }

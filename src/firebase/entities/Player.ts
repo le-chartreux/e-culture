@@ -52,11 +52,9 @@ export class Player {
   }
 
   saveServer(): void {
-    setDoc(this.ref, Object.assign({}, this))
+    setDoc(this.ref, this.doc)
       .then(() => console.debug(`Player ${this} saved on firestore.`))
-      .catch((reason) => {
-        console.error(`Player ${this} not saved on firestore: ${reason}.`)
-      })
+      .catch(reason => console.error(`Player ${this} not saved on firestore: ${reason}.`))
   }
 
   static loadFromSnapshot(snapshot: DocumentSnapshot): Player {
@@ -66,6 +64,10 @@ export class Player {
     } else {
       throw Error(`Impossible to create Player from ${snapshot}: pseudo not in data.`)
     }
+  }
+
+  get doc() {
+    return { id: this.id, pseudo: this.pseudo }
   }
 
   equals(other: any): boolean {

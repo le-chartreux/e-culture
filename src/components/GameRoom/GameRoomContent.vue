@@ -2,14 +2,13 @@
 import { defineComponent, type PropType } from 'vue'
 
 import GameRoomWaiting from '@/components/GameRoom/GameRoomWaiting.vue'
-import PlayersList from '@/components/PlayersList.vue'
 import GameRoomPlaying from '@/components/GameRoom/GameRoomPlaying/GameRoomPlaying.vue'
 import type { GameRoom } from '@/firebase/entities/GameRoom'
 
 export default defineComponent({
   data() {
     return {
-      gameEnded: true
+      gameEnded: null as boolean | null
     }
   },
   props: {
@@ -39,14 +38,15 @@ export default defineComponent({
   mounted() {
     this.updateLoopGameEnded()
   },
-  components: { GameRoomPlaying, PlayersList, GameRoomWaiting }
+  components: { GameRoomPlaying, GameRoomWaiting }
 })
 </script>
 
 <template>
-  <p>Players in this Game Room:</p>
-  <PlayersList :players="gameRoom.players" :owner="gameRoom.owner"></PlayersList>
-  <p v-if="gameEnded">game ended</p>
-  <GameRoomPlaying v-else-if="gameRoom.game.started" :game-room="gameRoom" />
+  <div v-if="gameRoom.game.started">
+    <!-- TODO scoreboard -->
+    <p v-if="gameEnded">game ended</p>
+    <GameRoomPlaying v-else :game-room="gameRoom" />
+  </div>
   <GameRoomWaiting v-else :game-room="gameRoom" />
 </template>
