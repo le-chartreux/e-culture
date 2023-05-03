@@ -24,7 +24,7 @@ body {
   border: solid var(--color-border) 2px;
   border-radius: 5px;
   margin: 5px;
-  padding: 5px 30px;
+  padding: 5px;
 }
 
 .pseudo-button:hover {

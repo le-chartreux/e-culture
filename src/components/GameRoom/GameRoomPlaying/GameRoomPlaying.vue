@@ -1,6 +1,10 @@
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue'
+import { updateDoc } from 'firebase/firestore';
+
 import type { GameRoom } from '@/firebase/entities/GameRoom'
+import GameRoomPlayingQuiz from "@/components/GameRoom/GameRoomPlaying/GameRoomPlayingQuiz.vue";
+import type { QuizAnswer } from "@/firebase/entities/QuizAnswer";
 
 export default defineComponent({
   data() {
@@ -20,19 +24,24 @@ export default defineComponent({
         this.currentQuiz = this.gameRoom.game.currentQuiz
         setTimeout(this.updateLoopCurrentQuiz, 100)
       }
+    },
+    async sendAnswer(answer: QuizAnswer) {
+      alert('answer sended')
+      if (answer.correct) {
+        await updateDoc(
+          this.gameRoom.ref,
+          {}
+        )
+      }
     }
   },
   mounted() {
     this.updateLoopCurrentQuiz()
-  }
+  },
+  components: {GameRoomPlayingQuiz}
 })
 </script>
 
 <template>
-  <p>questions:</p>
-  <ul>
-    <li v-for="quiz in gameRoom.game.quizzes" :key="quiz.id">
-      {{ quiz.question }} <span v-if="currentQuiz.id === quiz.id">CURRENT</span>
-    </li>
-  </ul>
+  <GameRoomPlayingQuiz :quiz="currentQuiz" @answer-selected="sendAnswer"/>
 </template>
