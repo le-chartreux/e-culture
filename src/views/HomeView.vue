@@ -53,11 +53,6 @@ main > img {
   justify-content: space-around;
 }
 
-.pseudo-button {
-  margin: 5px;
-  padding: 5px 30px;
-}
-
 footer {
   display: flex;
   flex-direction: row;
