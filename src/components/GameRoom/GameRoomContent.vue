@@ -3,7 +3,7 @@ import { defineComponent, type PropType } from 'vue'
 
 import GameRoomWaiting from '@/components/GameRoom/GameRoomWaiting.vue'
 import PlayersList from '@/components/PlayersList.vue'
-import GameRoomQuiz from '@/components/GameRoom/GameRoomQuiz.vue'
+import GameRoomPlaying from '@/components/GameRoom/GameRoomPlaying.vue'
 import type { GameRoom } from '@/firebase/entities/GameRoom'
 
 export default defineComponent({
@@ -39,7 +39,7 @@ export default defineComponent({
   mounted() {
     this.updateLoopGameEnded()
   },
-  components: { GameRoomQuiz, PlayersList, GameRoomWaiting }
+  components: { GameRoomPlaying, PlayersList, GameRoomWaiting }
 })
 </script>
 
@@ -47,6 +47,6 @@ export default defineComponent({
   <p>Players in this Game Room:</p>
   <PlayersList :players="gameRoom.players" :owner="gameRoom.owner"></PlayersList>
   <p v-if="gameEnded">game ended</p>
-  <GameRoomQuiz v-else-if="gameRoom.game.started" :game-room="gameRoom" />
+  <GameRoomPlaying v-else-if="gameRoom.game.started" :game-room="gameRoom" />
   <GameRoomWaiting v-else :game-room="gameRoom" />
 </template>
