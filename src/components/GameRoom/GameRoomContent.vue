@@ -3,7 +3,7 @@ import { defineComponent, type PropType } from 'vue'
 
 import GameRoomWaiting from '@/components/GameRoom/GameRoomWaiting.vue'
 import PlayersList from '@/components/PlayersList.vue'
-import GameRoomPlaying from '@/components/GameRoom/GameRoomPlaying.vue'
+import GameRoomPlaying from '@/components/GameRoom/GameRoomPlaying/GameRoomPlaying.vue'
 import type { GameRoom } from '@/firebase/entities/GameRoom'
 
 export default defineComponent({
