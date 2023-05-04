@@ -1,6 +1,5 @@
 <script lang="ts">
 import { defineComponent, type PropType } from 'vue'
-import { updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore'
 
 import type { GameRoom } from '@/firebase/entities/GameRoom'
 import GameRoomPlayingQuiz from '@/components/GameRoom/GameRoomPlaying/GameRoomPlayingQuiz.vue'
@@ -27,15 +26,8 @@ export default defineComponent({
         setTimeout(this.updateLoopCurrentQuiz, 100)
       }
     },
-    async sendAnswer(answer: QuizAnswer) {
-      if (answer.correct) {
-        const score = this.gameRoom.getScore(this.player)
-        if (score) {
-          await updateDoc(this.gameRoom.ref, { scores: arrayRemove(score.doc) })
-          score.addGoodAnswer()
-          await updateDoc(this.gameRoom.ref, { scores: arrayUnion(score.doc) })
-        }
-      }
+    sendAnswer(answer: QuizAnswer) {
+      this.gameRoom.sendAnswer(answer, this.player)
     }
   },
   mounted() {

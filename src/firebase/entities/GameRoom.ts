@@ -12,6 +12,7 @@ import { Score } from '@/firebase/entities/Score'
 import { gameRoomsRef } from '@/firebase'
 import { Game } from '@/firebase/entities/Game'
 import { Player } from '@/firebase/entities/Player'
+import type { QuizAnswer } from "@/firebase/entities/QuizAnswer";
 
 export class GameRoom {
   id: string
@@ -101,6 +102,17 @@ export class GameRoom {
 
   async startGame() {
     await updateDoc(this.ref, { startTime: Date.now() })
+  }
+
+  async sendAnswer(answer: QuizAnswer, player: Player) {
+    if (answer.correct) {
+      const score = this.getScore(player)
+      if (score) {
+        await updateDoc(this.ref, { scores: arrayRemove(score.doc) })
+        score.addGoodAnswer()
+        await updateDoc(this.ref, { scores: arrayUnion(score.doc) })
+      }
+    }
   }
 
 }
