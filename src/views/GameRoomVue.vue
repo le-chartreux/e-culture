@@ -1,9 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import {
-  updateDoc,
-  arrayUnion,
-  arrayRemove,
   onSnapshot,
   DocumentSnapshot,
   type Unsubscribe
@@ -13,7 +10,6 @@ import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 import GameRoomContent from '@/components/GameRoom/GameRoomContent.vue'
 import { GameRoom } from '@/firebase/entities/GameRoom'
 import { Player } from '@/firebase/entities/Player'
-import { Score } from '@/firebase/entities/Score'
 
 export default defineComponent({
   data() {
@@ -29,39 +25,40 @@ export default defineComponent({
     async setGameRoom() {
       this.gameRoom = await GameRoom.loadServerFromId(this.gameRoomId)
     },
-    async subscribeGameRoom() {
-      this.unSubscribeGameRoom = onSnapshot(
-        GameRoom.getRef(this.gameRoomId),
-        async (snapshot: DocumentSnapshot) => {
-          this.gameRoom = await GameRoom.loadServerFromSnapshot(snapshot)
-        }
-      )
-    },
-    unsubscribeGameRoomIfSubscribed() {
-      if (this.unSubscribeGameRoom) {
-        this.unSubscribeGameRoom()
+    subscribeGameRoom() {
+      if (this.gameRoom) {
+        this.unSubscribeGameRoom = onSnapshot(
+          this.gameRoom.ref,
+          async (snapshot: DocumentSnapshot) => this.gameRoom = await GameRoom.loadServerFromSnapshot(snapshot)
+        )
+      } else {
+        throw Error("Impossible to subscribe to the gameRoom: no gameRoom.")
       }
     },
     async joinGameRoom() {
-      await updateDoc(GameRoom.getRef(this.gameRoomId), {
-        scores: arrayUnion({ player: this.player.ref, points: 0 })
-      })
+      if (this.gameRoom) {
+        await this.gameRoom.addPlayerServer(this.player)
+      } else {
+        throw Error("Impossible to add player to the gameRoom: no gameRoom.")
+      }
     },
     async quitGameRoom() {
       if (this.gameRoom) {
-        const score = this.gameRoom.getScore(this.player) || new Score(0, this.player)
-        await updateDoc(this.gameRoom.ref, { scores: arrayRemove(score.doc) })
+        await this.gameRoom.removePlayerServer(this.player)
+      } else {
+        throw Error("Impossible to add player to the gameRoom: no gameRoom.")
       }
     }
   },
   mounted() {
     this.setGameRoom()
-    this.subscribeGameRoom()
-    this.joinGameRoom()
+      .then(() => { this.subscribeGameRoom(); this.joinGameRoom(); })
   },
   unmounted() {
     this.quitGameRoom()
-    this.unsubscribeGameRoomIfSubscribed()
+    if (this.unSubscribeGameRoom) {
+      this.unSubscribeGameRoom()
+    }
   }
 })
 </script>

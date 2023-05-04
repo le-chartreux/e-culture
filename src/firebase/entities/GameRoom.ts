@@ -1,4 +1,12 @@
-import { doc, DocumentReference, DocumentSnapshot, getDoc } from 'firebase/firestore'
+import {
+  arrayRemove,
+  arrayUnion,
+  doc,
+  DocumentReference,
+  DocumentSnapshot,
+  getDoc,
+  updateDoc
+} from "firebase/firestore";
 
 import { Score } from '@/firebase/entities/Score'
 import { gameRoomsRef } from '@/firebase'
@@ -17,7 +25,7 @@ export class GameRoom {
   }
 
   get owner(): Player | null {
-    return this.scores[0].player || null
+    return this.scores[0]?.player || null
   }
 
   isOwner(player: Player): boolean {
@@ -43,10 +51,18 @@ export class GameRoom {
     const scoresWithPlayerRef = snapshot.data()?.scores
     if (scoresWithPlayerRef instanceof Array) {
       for (const scoreWithPlayerRef of scoresWithPlayerRef) {
-        playersPromises.push(Player.loadServerFromRef(scoreWithPlayerRef.player))
+        const playerRef = scoreWithPlayerRef.player
+        if (playerRef instanceof DocumentReference) {
+          playersPromises.push(Player.loadServerFromRef(playerRef))
+        } else {
+          throw Error(
+            `Impossible to load a Game Room from snapshot ${snapshot}: 
+            one of the instances of scores does not have a field 'player' instance of DocumentReference.`
+          )
+        }
       }
       const players: Player[] = await Promise.all(playersPromises)
-      const scores = scoresWithPlayerRef.map(
+      const scores: Score[] = scoresWithPlayerRef.map(
         (scoreWithPlayerRef, index) => new Score(scoreWithPlayerRef.points, players[index])
       )
       return new GameRoom(snapshot.id, scores, startTime)
@@ -66,4 +82,19 @@ export class GameRoom {
   get players(): Player[] {
     return this.scores.map((score) => score.player)
   }
+
+  async addPlayerServer(player: Player) {
+    const score = new Score(0, player)
+    await updateDoc(this.ref, { scores: arrayUnion(score.doc) })
+  }
+
+  async removePlayerServer(player: Player) {
+    const score: Score | null = this.getScore(player)
+    if (score) {
+      await updateDoc(this.ref, { scores: arrayRemove(score.doc) })
+    } else {
+      console.error(`Impossible to remove player ${player} on game room ${this}: player not in game room.`)
+    }
+  }
+
 }
