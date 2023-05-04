@@ -6,7 +6,7 @@ import {
   DocumentSnapshot,
   getDoc,
   updateDoc
-} from "firebase/firestore";
+} from 'firebase/firestore'
 
 import { Score } from '@/firebase/entities/Score'
 import { gameRoomsRef } from '@/firebase'
@@ -93,8 +93,9 @@ export class GameRoom {
     if (score) {
       await updateDoc(this.ref, { scores: arrayRemove(score.doc) })
     } else {
-      console.error(`Impossible to remove player ${player} on game room ${this}: player not in game room.`)
+      console.error(
+        `Impossible to remove player ${player} on game room ${this}: player not in game room.`
+      )
     }
   }
-
 }

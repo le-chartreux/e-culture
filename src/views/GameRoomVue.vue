@@ -1,10 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import {
-  onSnapshot,
-  DocumentSnapshot,
-  type Unsubscribe
-} from 'firebase/firestore'
+import { onSnapshot, DocumentSnapshot, type Unsubscribe } from 'firebase/firestore'
 
 import HeaderDefault from '@/components/Header/HeaderDefault.vue'
 import GameRoomContent from '@/components/GameRoom/GameRoomContent.vue'
@@ -29,30 +25,33 @@ export default defineComponent({
       if (this.gameRoom) {
         this.unSubscribeGameRoom = onSnapshot(
           this.gameRoom.ref,
-          async (snapshot: DocumentSnapshot) => this.gameRoom = await GameRoom.loadServerFromSnapshot(snapshot)
+          async (snapshot: DocumentSnapshot) =>
+            (this.gameRoom = await GameRoom.loadServerFromSnapshot(snapshot))
         )
       } else {
-        throw Error("Impossible to subscribe to the gameRoom: no gameRoom.")
+        throw Error('Impossible to subscribe to the gameRoom: no gameRoom.')
       }
     },
     async joinGameRoom() {
       if (this.gameRoom) {
         await this.gameRoom.addPlayerServer(this.player)
       } else {
-        throw Error("Impossible to add player to the gameRoom: no gameRoom.")
+        throw Error('Impossible to add player to the gameRoom: no gameRoom.')
       }
     },
     async quitGameRoom() {
       if (this.gameRoom) {
         await this.gameRoom.removePlayerServer(this.player)
       } else {
-        throw Error("Impossible to add player to the gameRoom: no gameRoom.")
+        throw Error('Impossible to add player to the gameRoom: no gameRoom.')
       }
     }
   },
   mounted() {
-    this.setGameRoom()
-      .then(() => { this.subscribeGameRoom(); this.joinGameRoom(); })
+    this.setGameRoom().then(() => {
+      this.subscribeGameRoom()
+      this.joinGameRoom()
+    })
   },
   unmounted() {
     this.quitGameRoom()
