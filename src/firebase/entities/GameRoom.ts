@@ -98,4 +98,9 @@ export class GameRoom {
       )
     }
   }
+
+  async startGame() {
+    await updateDoc(this.ref, { startTime: Date.now() })
+  }
+
 }
