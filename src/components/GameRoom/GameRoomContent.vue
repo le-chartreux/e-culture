@@ -3,7 +3,7 @@ import { defineComponent, type PropType } from 'vue'
 
 import GameRoomWaiting from '@/components/GameRoom/GameRoomWaiting.vue'
 import GameRoomPlaying from '@/components/GameRoom/GameRoomPlaying/GameRoomPlaying.vue'
-import GameRoomScores from "@/components/GameRoom/GameRoomScores.vue";
+import GameRoomScores from '@/components/GameRoom/GameRoomScores.vue'
 import type { GameRoom } from '@/firebase/entities/GameRoom'
 
 export default defineComponent({
@@ -45,7 +45,7 @@ export default defineComponent({
 
 <template>
   <div v-if="gameRoom.game.started">
-    <GameRoomScores :scores="gameRoom.scores"/>
+    <GameRoomScores :scores="gameRoom.scores" />
     <p v-if="gameEnded">game ended</p>
     <GameRoomPlaying v-else :game-room="gameRoom" />
   </div>
