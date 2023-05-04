@@ -1,6 +1,6 @@
 [
   {
-    "question": "General Knowledge : Which king was responsible for the Norman Conquest of England?",
+    "question": "Which king was responsible for the Norman Conquest of England?",
     "answers": [
       { "answer": "William the Conqueror", "correct": true },
       { "answer": "Richard the Lionheart", "correct": false },
@@ -10,7 +10,7 @@
     "tags": ["history"]
   },
   {
-    "question": "General Knowledge : Which battle marked the end of the Anglo-Saxon era and the beginning of Norman rule in England?",
+    "question": "Which battle marked the end of the Anglo-Saxon era and the beginning of Norman rule in England?",
     "answers": [
       { "answer": "The Battle of Hastings", "correct": true },
       { "answer": "The Battle of Stamford Bridge", "correct": false },
@@ -20,7 +20,7 @@
     "tags": ["history"]
   },
   {
-    "question": "General Knowledge : Who was the first Tudor monarch of England?",
+    "question": "Who was the first Tudor monarch of England?",
     "answers": [
       { "answer": "Henry VII", "correct": true },
       { "answer": "Edward VI", "correct": false },
@@ -30,7 +30,7 @@
     "tags": ["history"]
   },
   {
-    "question": "General Knowledge : What was the cause of the English Civil War?",
+    "question": "What was the cause of the English Civil War?",
     "answers": [
       { "answer": "A struggle for power between the King and Parliament", "correct": true },
       { "answer": "A rebellion against foreign rule", "correct": false },
@@ -40,7 +40,7 @@
     "tags": ["history"]
   },
   {
-    "question": "General Knowledge : Who was the last monarch of the House of Stuart?",
+    "question": "Who was the last monarch of the House of Stuart?",
     "answers": [
       { "answer": "Queen Anne", "correct": true },
       { "answer": "King James II", "correct": false },
@@ -50,7 +50,7 @@
     "tags": ["history"]
   },
   {
-    "question": "General Knowledge : What event led to the Glorious Revolution in England?",
+    "question": "What event led to the Glorious Revolution in England?",
     "answers": [
       {
         "answer": "The deposition of King James II and the accession of William and Mary",
@@ -63,7 +63,7 @@
     "tags": ["history"]
   },
   {
-    "question": "General Knowledge : Who was the first English monarch to be beheaded?",
+    "question": "Who was the first English monarch to be beheaded?",
     "answers": [
       { "answer": "King Charles I", "correct": true },
       { "answer": "King Edward I", "correct": false },
@@ -73,7 +73,7 @@
     "tags": ["history"]
   },
   {
-    "question": "General Knowledge : What was the name of the ship that carried the Pilgrims to the New World?",
+    "question": "What was the name of the ship that carried the Pilgrims to the New World?",
     "answers": [
       { "answer": "The Mayflower", "correct": true },
       { "answer": "The Santa Maria", "correct": false },
@@ -83,7 +83,7 @@
     "tags": ["history"]
   },
   {
-    "question": "General Knowledge : What is the highest mountain in the UK?",
+    "question": "What is the highest mountain in the UK?",
     "answers": [
       { "answer": "Ben Nevis", "correct": true },
       { "answer": "Snowdon", "correct": false },
@@ -93,7 +93,7 @@
     "tags": ["geography"]
   },
   {
-    "question": "General Knowledge : What is the longest river in the UK?",
+    "question": "What is the longest river in the UK?",
     "answers": [
       { "answer": "River Severn", "correct": true },
       { "answer": "River Thames", "correct": false },
@@ -103,7 +103,7 @@
     "tags": ["geography"]
   },
   {
-    "question": "General Knowledge : What is the largest lake in the UK?",
+    "question": "What is the largest lake in the UK?",
     "answers": [
       { "answer": "Loch Lomond", "correct": true },
       { "answer": "Lake Windermere", "correct": false },
@@ -112,7 +112,7 @@
     ]
   },
   {
-    "question": "General Knowledge : What is the name of the famous prehistoric monument located in Wiltshire, England?",
+    "question": "What is the name of the famous prehistoric monument located in Wiltshire, England?",
     "answers": [
       { "answer": "Stonehenge", "correct": true },
       { "answer": "Avebury", "correct": false },
@@ -122,7 +122,7 @@
     "tags": ["geography"]
   },
   {
-    "question": "General Knowledge : What is the highest waterfall in the UK?",
+    "question": "What is the highest waterfall in the UK?",
     "answers": [
       { "answer": "Eas a' Chual Aluinn", "correct": true },
       { "answer": "Sgwd Ddu", "correct": false },
@@ -132,7 +132,7 @@
     "tags": ["geography"]
   },
   {
-    "question": "General Knowledge : What is the name of the highest village in Scotland?",
+    "question": "What is the name of the highest village in Scotland?",
     "answers": [
       { "answer": "Wanlockhead", "correct": true },
       { "answer": "Tomintoul", "correct": false },
@@ -142,7 +142,7 @@
     "tags": ["geography"]
   },
   {
-    "question": "General Knowledge : What is the name of the peninsula in southwestern England that is famous for its beaches and surf culture?",
+    "question": "What is the name of the peninsula in southwestern England that is famous for its beaches and surf culture?",
     "answers": [
       { "answer": "Cornwall", "correct": true },
       { "answer": "Devon", "correct": false },
@@ -152,7 +152,7 @@
     "tags": ["geography"]
   },
   {
-    "question": "General Knowledge : What is the name of the highest mountain in Wales?",
+    "question": "What is the name of the highest mountain in Wales?",
     "answers": [
       { "answer": "Snowdon", "correct": true },
       { "answer": "Cader Idris", "correct": false },
@@ -162,7 +162,7 @@
     "tags": ["geography"]
   },
   {
-    "question": "General Knowledge : What is the capital of the United Kingdom?",
+    "question": "What is the capital of the United Kingdom?",
     "answers": [
       { "answer": "London", "correct": true },
       { "answer": "Paris", "correct": false },
@@ -172,7 +172,7 @@
     "tags": ["geography"]
   },
   {
-    "question": "General Knowledge : How many inhabited islands belong to the United Kingdom?",
+    "question": "How many inhabited islands belong to the United Kingdom?",
     "answers": [
       { "answer": "129", "correct": true },
       { "answer": "17", "correct": false },
@@ -182,7 +182,7 @@
     "tags": ["geography"]
   },
   {
-    "question": "General Knowledge : Which of those city names is NOT in the United Kingdom?",
+    "question": "Which of those city names is NOT in the United Kingdom?",
     "answers": [
       { "answer": "Bergen", "correct": true },
       { "answer": "Belfast", "correct": false },
@@ -192,7 +192,7 @@
     "tags": ["geography"]
   },
   {
-    "question": "General Knowledge : Who wrote the novel '1984', which is considered one of the most important works of dystopian fiction?",
+    "question": "Who wrote the novel '1984', which is considered one of the most important works of dystopian fiction?",
     "answers": [
       { "answer": "George Orwell", "correct": true },
       { "answer": "Aldous Huxley", "correct": false },
@@ -202,7 +202,7 @@
     "tags": ["art", "literature"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous novel by Jane Austen that follows the story of Elizabeth Bennet and Mr. Darcy?",
+    "question": "What is the name of the famous novel by Jane Austen that follows the story of Elizabeth Bennet and Mr. Darcy?",
     "answers": [
       { "answer": "Pride and Prejudice", "correct": true },
       { "answer": "Sense and Sensibility", "correct": false },
@@ -212,7 +212,7 @@
     "tags": ["art", "literature"]
   },
   {
-    "question": "General Knowledge : What is the name of the Nobel Prize-winning British author who wrote the novels 'Lord of the Flies' and 'Rites of Passage'?",
+    "question": "What is the name of the Nobel Prize-winning British author who wrote the novels 'Lord of the Flies' and 'Rites of Passage'?",
     "answers": [
       { "answer": "William Golding", "correct": true },
       { "answer": "J.K. Rowling", "correct": false },
@@ -222,7 +222,7 @@
     "tags": ["art", "literature"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous British children's author who created the character of Peter Rabbit?",
+    "question": "What is the name of the famous British children's author who created the character of Peter Rabbit?",
     "answers": [
       { "answer": "Beatrix Potter", "correct": true },
       { "answer": "Lewis Carroll", "correct": false },
@@ -232,7 +232,7 @@
     "tags": ["art", "literature"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous English poet who wrote the poem 'The Waste Land'?",
+    "question": "What is the name of the famous English poet who wrote the poem 'The Waste Land'?",
     "answers": [
       { "answer": "T.S. Eliot", "correct": true },
       { "answer": "William Wordsworth", "correct": false },
@@ -242,7 +242,7 @@
     "tags": ["art", "literature"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous English playwright who wrote the plays 'Hamlet', 'Macbeth', and 'Romeo and Juliet'?",
+    "question": "What is the name of the famous English playwright who wrote the plays 'Hamlet', 'Macbeth', and 'Romeo and Juliet'?",
     "answers": [
       { "answer": "William Shakespeare", "correct": true },
       { "answer": "Christopher Marlowe", "correct": false },
@@ -252,7 +252,7 @@
     "tags": ["art", "literature"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous Scottish novelist who wrote the novel 'Rob Roy'?",
+    "question": "What is the name of the famous Scottish novelist who wrote the novel 'Rob Roy'?",
     "answers": [
       { "answer": "Sir Walter Scott", "correct": true },
       { "answer": "Robert Louis Stevenson", "correct": false },
@@ -262,7 +262,7 @@
     "tags": ["art", "literature"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous British artist known for his vivid, colorful paintings of landscapes and portraits?",
+    "question": "What is the name of the famous British artist known for his vivid, colorful paintings of landscapes and portraits?",
     "answers": [
       { "answer": "David Hockney", "correct": true },
       { "answer": "Banksy", "correct": false },
@@ -272,7 +272,7 @@
     "tags": ["art", "painting"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous British sculptor known for his abstract, modernist sculptures?",
+    "question": "What is the name of the famous British sculptor known for his abstract, modernist sculptures?",
     "answers": [
       { "answer": "Henry Moore", "correct": true },
       { "answer": "Barbara Hepworth", "correct": false },
@@ -282,7 +282,7 @@
     "tags": ["art", "painting"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous British fashion designer who created the iconic punk fashion style?",
+    "question": "What is the name of the famous British fashion designer who created the iconic punk fashion style?",
     "answers": [
       { "answer": "Vivienne Westwood", "correct": true },
       { "answer": "Alexander McQueen", "correct": false },
@@ -292,7 +292,7 @@
     "tags": ["art", "fashion"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous British architect who designed the iconic 'Gherkin' building in London?",
+    "question": "What is the name of the famous British architect who designed the iconic 'Gherkin' building in London?",
     "answers": [
       { "answer": "Norman Foster", "correct": true },
       { "answer": "Richard Rogers", "correct": false },
@@ -302,7 +302,7 @@
     "tags": ["art", "architecture"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous British composer who wrote the music for 'The Planets' and 'Jupiter'?",
+    "question": "What is the name of the famous British composer who wrote the music for 'The Planets' and 'Jupiter'?",
     "answers": [
       { "answer": "Gustav Holst", "correct": true },
       { "answer": "Benjamin Britten", "correct": false },
@@ -312,7 +312,7 @@
     "tags": ["art", "music"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous British theater director who founded the Royal Shakespeare Company?",
+    "question": "What is the name of the famous British theater director who founded the Royal Shakespeare Company?",
     "answers": [
       { "answer": "Peter Hall", "correct": true },
       { "answer": "Trevor Nunn", "correct": false },
@@ -322,7 +322,7 @@
     "tags": ["art", "theater"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous British film director who directed 'Trainspotting' and 'Slumdog Millionaire'?",
+    "question": "What is the name of the famous British film director who directed 'Trainspotting' and 'Slumdog Millionaire'?",
     "answers": [
       { "answer": "Danny Boyle", "correct": true },
       { "answer": "Mike Leigh", "correct": false },
@@ -332,7 +332,7 @@
     "tags": ["art", "movie"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous annual rowing race that takes place on the River Thames in London?",
+    "question": "What is the name of the famous annual rowing race that takes place on the River Thames in London?",
     "answers": [
       { "answer": "The Boat Race", "correct": true },
       { "answer": "The Oxford and Cambridge Regatta", "correct": false },
@@ -342,7 +342,7 @@
     "tags": ["sport"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous English rugby team that plays their home games at Twickenham stadium?",
+    "question": "What is the name of the famous English rugby team that plays their home games at Twickenham stadium?",
     "answers": [
       { "answer": "England national rugby team", "correct": true },
       { "answer": "Leicester Tigers", "correct": false },
@@ -352,7 +352,7 @@
     "tags": ["sport"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous horse racing event that takes place at Aintree racecourse in Liverpool?",
+    "question": "What is the name of the famous horse racing event that takes place at Aintree racecourse in Liverpool?",
     "answers": [
       { "answer": "The Grand National", "correct": true },
       { "answer": "The Derby", "correct": false },
@@ -362,7 +362,7 @@
     "tags": ["sport"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous English football stadium that is also known as the 'Theatre of Dreams'?",
+    "question": "What is the name of the famous English football stadium that is also known as the 'Theatre of Dreams'?",
     "answers": [
       { "answer": "Old Trafford", "correct": true },
       { "answer": "Anfield", "correct": false },
@@ -372,7 +372,7 @@
     "tags": ["sport"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous English tennis tournament that takes place at the All England Lawn Tennis and Croquet Club in Wimbledon?",
+    "question": "What is the name of the famous English tennis tournament that takes place at the All England Lawn Tennis and Croquet Club in Wimbledon?",
     "answers": [
       { "answer": "Wimbledon", "correct": true },
       { "answer": "US Open", "correct": false },
@@ -382,7 +382,7 @@
     "tags": ["sport"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous English footballer who is widely regarded as one of the greatest players of all time and played for Manchester United and the England national team?",
+    "question": "What is the name of the famous English footballer who is widely regarded as one of the greatest players of all time and played for Manchester United and the England national team?",
     "answers": [
       { "answer": "David Beckham", "correct": false },
       { "answer": "Wayne Rooney", "correct": true },
@@ -392,7 +392,7 @@
     "tags": ["sport"]
   },
   {
-    "question": "General Knowledge : What is the name of the famous English boxer who is widely regarded as one of the greatest heavyweight boxers of all time?",
+    "question": "What is the name of the famous English boxer who is widely regarded as one of the greatest heavyweight boxers of all time?",
     "answers": [
       { "answer": "Tyson Fury", "correct": false },
       { "answer": "Anthony Joshua", "correct": false },
@@ -400,315 +400,5 @@
       { "answer": "Frank Bruno", "correct": false }
     ],
     "tags": ["sport"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from England ?",
-    "answers": [
-      { "answer": "Benedict Cumberbatch", "correct": false },
-      { "answer": "Shawn Mendes", "correct": true },
-      { "answer": "Tom Holland", "correct": false },
-      { "answer": "Kate Winslet ", "correct": false }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from England ?",
-    "answers": [
-      { "answer": "Hugh Grant", "correct": false },
-      { "answer": "Keira Knightley", "correct": false },
-      { "answer": "Colin Firth", "correct": false },
-      { "answer": "James Corden", "correct": true }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from England ?",
-    "answers": [
-      { "answer": "", "correct": true },
-      { "answer": "Helen Mirren", "correct": false },
-      { "answer": "Judi Dench", "correct": false },
-      { "answer": "Tom Hardy", "correct": false }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from England ?",
-    "answers": [
-      { "answer": "Rowan Atkinson", "correct": false },
-      { "answer": "Naomi Campbell", "correct": false },
-      { "answer": "Cara Delevingne", "correct": false },
-      { "answer": "Nicole Kidman", "correct": true }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from England ?",
-    "answers": [
-      { "answer": "Keanu Reeves", "correct": true },
-      { "answer": "Ed Sheeran", "correct": false },
-      { "answer": "Ellie Goulding", "correct": false },
-      { "answer": "Sam Smith", "correct": false }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from England ?",
-    "answers": [
-      { "answer": "Ryan Reynolds", "correct": true },
-      { "answer": "Simon Cowell", "correct": false },
-      { "answer": "Gordon Ramsay", "correct": false },
-      { "answer": "Jamie Oliver", "correct": false }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from England ?",
-    "answers": [
-      { "answer": "Lily Allen", "correct": false },
-      { "answer": "David Attenborough", "correct": false },
-      { "answer": "Charlie Hunnam", "correct": false },
-      { "answer": "Margot Robbie", "correct": true }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from the United States ?",
-    "answers": [
-      { "answer": "Beyoncé", "correct": false },
-      { "answer": "Tom Hanks", "correct": false },
-      { "answer": "Emma Watson", "correct": true },
-      { "answer": "Jennifer Lawrence", "correct": false }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from the United States ?",
-    "answers": [
-      { "answer": "Will Smith", "correct": false },
-      { "answer": "Chris Hemsworth", "correct": true },
-      { "answer": "Meryl Streep", "correct": false },
-      { "answer": "Leonardo DiCaprio", "correct": false }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from the United States ?",
-    "answers": [
-      { "answer": "Adele", "correct": true },
-      { "answer": "Angelina Jolie", "correct": false },
-      { "answer": "Denzel Washington", "correct": false },
-      { "answer": "George Clooney", "correct": false }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from the United States ?",
-    "answers": [
-      { "answer": "Sandra Bullock", "correct": false },
-      { "answer": "Brad Pitt", "correct": false },
-      { "answer": "Tessa Thompson", "correct": true },
-      { "answer": "Julia Roberts", "correct": false }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from the United States ?",
-    "answers": [
-      { "answer": "Robert De Niro", "correct": false },
-      { "answer": "Idris Elba", "correct": true },
-      { "answer": "Jennifer Aniston", "correct": false },
-      { "answer": "Johnny Depp", "correct": false }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from the United States ?",
-    "answers": [
-      { "answer": "Tom Cruise", "correct": false },
-      { "answer": "Margot Robbie", "correct": true },
-      { "answer": "Dwayne Johnson", "correct": false },
-      { "answer": "Scarlett Johansson", "correct": false }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from the United States ?",
-    "answers": [
-      { "answer": "", "correct": true },
-      { "answer": "Chris Evans", "correct": false },
-      { "answer": "Mark Wahlberg", "correct": false },
-      { "answer": "Taylor Swift", "correct": false }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "Guess the Intruder : Which celebrity is not from the United States ?",
-    "answers": [
-      { "answer": "Kanye West", "correct": false },
-      { "answer": "Nicole Kidman", "correct": true },
-      { "answer": "Justin Timberlake", "correct": false },
-      { "answer": "Lady Gaga", "correct": false }
-    ],
-    "tags": ["intruder"]
-  },
-  {
-    "question": "British or American : Which word is British ?",
-    "answers": [
-      { "answer": "Center", "correct": false },
-      { "answer": "Centre", "correct": true }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is British ?",
-    "answers": [
-      { "answer": "Dialog", "correct": false },
-      { "answer": "Dialogue", "correct": true }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is British ?",
-    "answers": [
-      { "answer": "Cookie", "correct": false },
-      { "answer": "Biscuit", "correct": true }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is British ?",
-    "answers": [
-      { "answer": "Gasoline", "correct": false },
-      { "answer": "Petrol", "correct": true }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is British ?",
-    "answers": [
-      { "answer": "Travelled", "correct": true },
-      { "answer": "Traveled", "correct": false }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is British ?",
-    "answers": [
-      { "answer": "Jumper", "correct": true },
-      { "answer": "Sweater", "correct": false }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is British ?",
-    "answers": [
-      { "answer": "Grey", "correct": true },
-      { "answer": "Gray", "correct": false }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is British ?",
-    "answers": [
-      { "answer": "Pavement", "correct": true },
-      { "answer": "Sidewalk", "correct": false }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is British ?",
-    "answers": [
-      { "answer": "Football", "correct": true },
-      { "answer": "Soccer", "correct": false }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is British ?",
-    "answers": [
-      { "answer": "Queue", "correct": true },
-      { "answer": "Line", "correct": false }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is American ?",
-    "answers": [
-      { "answer": "Color", "correct": true },
-      { "answer": "Colour ", "correct": false }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is American ?",
-    "answers": [
-      { "answer": "Truck", "correct": true },
-      { "answer": "Lorry", "correct": false }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is American ?",
-    "answers": [
-      { "answer": "Apartment", "correct": true },
-      { "answer": "Flat", "correct": false }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is American ?",
-    "answers": [
-      { "answer": "Lift", "correct": false },
-      { "answer": "Elevator", "correct": true }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is American ?",
-    "answers": [
-      { "answer": "Programme", "correct": false },
-      { "answer": "Program", "correct": true }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is American ?",
-    "answers": [
-      { "answer": "Organization", "correct": true },
-      { "answer": "Organisation", "correct": false }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is American ?",
-    "answers": [
-      { "answer": "Defence", "correct": false },
-      { "answer": "Defense", "correct": true }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is American ?",
-    "answers": [
-      { "answer": "Aluminium", "correct": false },
-      { "answer": "Aluminum", "correct": true }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is American ?",
-    "answers": [
-      { "answer": "Counseling", "correct": true },
-      { "answer": "Counselling", "Diarise": false }
-    ],
-    "tags": ["vocabulary"]
-  },
-  {
-    "question": "British or American : Which word is American ?",
-    "answers": [
-      { "answer": "Schedule", "correct": true },
-      { "answer": "Diarise", "Diarise": false }
-    ],
-    "tags": ["vocabulary"]
   }
 ]
