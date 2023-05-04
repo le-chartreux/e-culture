@@ -12,7 +12,7 @@ import { Score } from '@/firebase/entities/Score'
 import { gameRoomsRef } from '@/firebase'
 import { Game } from '@/firebase/entities/Game'
 import { Player } from '@/firebase/entities/Player'
-import type { QuizAnswer } from "@/firebase/entities/QuizAnswer";
+import type { QuizAnswer } from '@/firebase/entities/QuizAnswer'
 
 export class GameRoom {
   id: string
@@ -114,5 +114,4 @@ export class GameRoom {
       }
     }
   }
-
 }
