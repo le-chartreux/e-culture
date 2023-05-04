@@ -16,4 +16,8 @@ export class Score {
   addGoodAnswer() {
     this.points++
   }
+
+  valueOf() {
+    return this.points
+  }
 }
