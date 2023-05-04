@@ -15,8 +15,7 @@ export default defineComponent({
       required: true
     },
     owner: {
-      type: Object as PropType<Player | null>,
-      required: true
+      type: Object as PropType<Player | null>
     }
   }
 })
