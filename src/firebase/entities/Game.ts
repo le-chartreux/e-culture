@@ -61,11 +61,14 @@ export class Game {
     }
   }
 
+  get secondsSinceStart(): number {
+    const msSinceStart = Date.now().valueOf() - (this.startTime as Date).valueOf()
+    return msSinceStart / 1000
+  }
+
   get indexCurrentQuiz(): number {
     if (this.started) {
-      const msSinceStart = Date.now().valueOf() - (this.startTime as Date).valueOf()
-      const secondsSinceStart = msSinceStart / 1000
-      return Math.floor(secondsSinceStart / Game.SECONDS_BY_QUESTION)
+      return Math.floor(this.secondsSinceStart / Game.SECONDS_BY_QUESTION)
     } else {
       throw Error("Impossible to calculate the index of the current quiz: the game haven't started")
     }
@@ -77,5 +80,13 @@ export class Game {
 
   get ended(): boolean {
     return this.started && this.indexCurrentQuiz + 1 > Game.NUMBER_OF_QUIZZES
+  }
+
+  get secondsSinceQuizStarted(): number {
+    return this.secondsSinceStart - this.indexCurrentQuiz * Game.SECONDS_BY_QUESTION
+  }
+
+  get timeUntilNextQuiz(): number {
+    return Math.ceil(Game.SECONDS_BY_QUESTION - this.secondsSinceQuizStarted)
   }
 }
