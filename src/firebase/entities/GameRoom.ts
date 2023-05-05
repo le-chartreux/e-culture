@@ -100,7 +100,7 @@ export class GameRoom {
     }
   }
 
-  async startGame() {
+  async startGameServer() {
     await updateDoc(this.ref, { startTime: Date.now() })
   }
 

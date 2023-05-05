@@ -23,7 +23,7 @@ export default defineComponent({
 
 <template>
   <PlayersList :players="gameRoom.players" :owner="gameRoom.owner"></PlayersList>
-  <button class="pseudo-button" v-if="gameRoom.isOwner(player)" @click="gameRoom.startGame">
+  <button class="pseudo-button" v-if="gameRoom.isOwner(player)" @click="gameRoom.startGameServer">
     Start game
   </button>
   <p v-else>Waiting for the owner to start the game...</p>
