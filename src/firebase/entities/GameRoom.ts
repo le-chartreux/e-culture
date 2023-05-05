@@ -94,7 +94,7 @@ export class GameRoom {
     if (score) {
       await updateDoc(this.ref, { scores: arrayRemove(score.doc) })
     } else {
-      console.error(
+      throw Error(
         `Impossible to remove player ${player} on game room ${this}: player not in game room.`
       )
     }
