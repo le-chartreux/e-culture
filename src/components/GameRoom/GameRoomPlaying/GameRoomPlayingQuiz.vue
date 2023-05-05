@@ -2,24 +2,59 @@
 import { defineComponent, type PropType } from 'vue'
 
 import type { Quiz } from '@/firebase/entities/Quiz'
+import type { QuizAnswer } from "@/firebase/entities/QuizAnswer";
 
 export default defineComponent({
+  data() { return {
+    selectedAnswer: null as null | QuizAnswer
+  }},
   props: {
     quiz: {
       type: Object as PropType<Quiz>,
       required: true
+    },
+    remainingTime: {
+      type: Object as PropType<number>,
+      required: true
     }
   },
-  emits: ['answerSelected']
+  emits: ['answerSelected'],
+  watch: {
+    quiz() {
+      this.selectedAnswer = null
+    }
+  },
+  computed: {
+    shuffledAnswers(): QuizAnswer[] {
+      const shuffledAnswers = [...this.quiz.answers]
+      for (let i = shuffledAnswers.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledAnswers[i], shuffledAnswers[j]] = [shuffledAnswers[j], shuffledAnswers[i]];
+      }
+      return shuffledAnswers;
+    }
+  },
+  methods: {
+    selectAnswer(answer: QuizAnswer) {
+      this.selectedAnswer = answer
+      this.$emit('answerSelected', answer)
+    }
+  }
 })
 </script>
 
 <template>
   <div id="quiz">
     <h3>{{ quiz.question }}</h3>
-    <ul id="answers">
-      <li v-for="(answer, index) in quiz.answers" :key="index">
-        <button class="pseudo-button" @click="$emit('answerSelected', answer)">
+    <p>Remaining time: {{remainingTime}}</p>
+    <p v-if="selectedAnswer" id="result">
+      Your answer is <span id="correct-indicator" v-if="selectedAnswer.correct">CORRECT</span><span id="incorrect-indicator" v-else>INCORRECT</span>
+      <br>
+      Waiting for the next question...
+    </p>
+    <ul id="answers" v-else>
+      <li v-for="(answer, index) in shuffledAnswers" :key="index">
+        <button class="pseudo-button" @click="selectAnswer(answer)">
           {{ answer.answer }}
         </button>
       </li>
@@ -50,4 +85,17 @@ export default defineComponent({
   min-height: 20dvh;
   min-width: 30dvw;
 }
+
+#result {
+    text-align: center;
+}
+
+#correct-indicator {
+    color: green;
+}
+
+#incorrect-indicator {
+    color: red
+}
+
 </style>
