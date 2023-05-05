@@ -27,7 +27,7 @@ export default defineComponent({
       }
     },
     sendAnswer(answer: QuizAnswer) {
-      this.gameRoom.sendAnswer(answer, this.player)
+      this.gameRoom.sendAnswerServer(answer, this.player)
     }
   },
   mounted() {

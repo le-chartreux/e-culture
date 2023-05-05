@@ -104,7 +104,7 @@ export class GameRoom {
     await updateDoc(this.ref, { startTime: Date.now() })
   }
 
-  async sendAnswer(answer: QuizAnswer, player: Player) {
+  async sendAnswerServer(answer: QuizAnswer, player: Player) {
     if (answer.correct) {
       const score = this.getScore(player)
       if (score) {
