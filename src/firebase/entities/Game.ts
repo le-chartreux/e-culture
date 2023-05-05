@@ -35,6 +35,10 @@ export class Game {
    * numberOfQuizzes should be lower than the number of available quizzes!
    * */
   static fromNumberSeed(seed: number, startTime: Date | null): Game {
+    return new Game(this.getChosenQuizzesFromNumberSeed(seed), startTime)
+  }
+
+  private static getChosenQuizzesFromNumberSeed(seed: number): Quiz[] {
     const rng = prand.xoroshiro128plus(seed)
     const chosenQuizzes: Quiz[] = []
     const availableQuizzes = Quiz.ALL
@@ -44,7 +48,7 @@ export class Game {
       chosenQuizzes.push(chosenQuiz)
       availableQuizzes.splice(chosenIndex, 1)
     }
-    return new Game(chosenQuizzes, startTime)
+    return chosenQuizzes
   }
 
   get currentQuiz(): Quiz {
