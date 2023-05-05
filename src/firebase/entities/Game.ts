@@ -4,7 +4,7 @@ import { Quiz } from '@/firebase/entities/Quiz'
 export class Game {
   quizzes: Quiz[]
   startTime: Date | null
-  static readonly SECONDS_BY_QUESTION = 10000
+  static readonly SECONDS_BY_QUESTION = 10
 
   constructor(quizzes: Quiz[], startTime: Date | null) {
     this.quizzes = quizzes
