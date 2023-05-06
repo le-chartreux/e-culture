@@ -38,9 +38,9 @@ export default defineComponent({
 
 <template>
   <p>Quiz {{gameRoom.game.indexCurrentQuiz + 1}} of {{gameRoom.game.quizzes.length}}</p>
+  <p>Remaining time: {{ gameRoom.game.timeUntilNextQuiz }}</p>
   <GameRoomPlayingQuiz
-    :quiz="currentQuiz"
-    :remaining-time="timeUntilNextQuiz"
+    :quiz="gameRoom.game.currentQuiz"
     @answer-selected="sendAnswer"
   />
 </template>

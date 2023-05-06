@@ -14,10 +14,6 @@ export default defineComponent({
     quiz: {
       type: Object as PropType<Quiz>,
       required: true
-    },
-    remainingTime: {
-      type: Number as PropType<number>,
-      required: true
     }
   },
   emits: ['answerSelected'],
@@ -48,7 +44,6 @@ export default defineComponent({
 <template>
   <div id="quiz">
     <h3>{{ quiz.question }}</h3>
-    <p>Remaining time: {{ remainingTime }}</p>
     <p v-if="selectedAnswer" id="result">
       Your answer is <span id="correct-indicator" v-if="selectedAnswer.correct">CORRECT</span
       ><span id="incorrect-indicator" v-else>INCORRECT</span>
