@@ -88,12 +88,4 @@ export default defineComponent({
 #result {
   text-align: center;
 }
-
-#correct-indicator {
-  color: green;
-}
-
-#incorrect-indicator {
-  color: red;
-}
 </style>
