@@ -7,7 +7,9 @@ import GameRoomScores from '@/components/GameRoom/GameRoomScores.vue'
 import type { GameRoom } from '@/firebase/entities/GameRoom'
 
 export default defineComponent({
-  data() {return {}},
+  data() {
+    return {}
+  },
   props: {
     gameRoom: {
       type: Object as PropType<GameRoom>,
