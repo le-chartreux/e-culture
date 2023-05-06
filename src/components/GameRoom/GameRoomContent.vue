@@ -9,7 +9,9 @@ import type { GameRoom } from '@/firebase/entities/GameRoom'
 
 export default defineComponent({
   data() {
-    return {}
+    return {
+      updateLoopRunning: false
+    }
   },
   props: {
     gameRoom: {
@@ -17,11 +19,23 @@ export default defineComponent({
       required: true
     }
   },
+  watch: {
+    gameRoom: {
+      handler() {
+        if (! this.gameRoom.game.ended && ! this.updateLoopRunning) {
+          this.runUpdateLoop()
+        }
+      }
+    }
+  },
   methods: {
     runUpdateLoop() {
+      this.$forceUpdate()
       if (!this.gameRoom.game.ended) {
-        this.$forceUpdate()
+        this.updateLoopRunning = true
         setTimeout(this.runUpdateLoop, 300)
+      } else {
+        this.updateLoopRunning = false
       }
     }
   },
