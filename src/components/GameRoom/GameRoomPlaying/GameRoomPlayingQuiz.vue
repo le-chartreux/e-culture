@@ -14,7 +14,7 @@ export default defineComponent({
       required: true
     },
     remainingTime: {
-      type: Object as PropType<number>,
+      type: Number as PropType<number>,
       required: true
     }
   },
