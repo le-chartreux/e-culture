@@ -108,9 +108,9 @@ export class GameRoom {
     if (answer.correct) {
       const score = this.getScore(player)
       if (score) {
-        //await updateDoc(this.ref, { scores: arrayRemove(score.doc) })
+        await updateDoc(this.ref, { scores: arrayRemove(score.doc) })
         score.addGoodAnswer()
-        //await updateDoc(this.ref, { scores: arrayUnion(score.doc) })
+        await updateDoc(this.ref, { scores: arrayUnion(score.doc) })
       }
     }
   }
