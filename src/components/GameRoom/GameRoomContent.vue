@@ -21,7 +21,7 @@ export default defineComponent({
     runUpdateLoop() {
       if (!this.gameRoom.game.ended) {
         this.$forceUpdate()
-        setTimeout(this.runUpdateLoop, 100)
+        setTimeout(this.runUpdateLoop, 300)
       }
     }
   },
