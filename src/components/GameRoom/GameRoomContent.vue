@@ -22,7 +22,7 @@ export default defineComponent({
   watch: {
     gameRoom: {
       handler() {
-        if (! this.gameRoom.game.ended && ! this.updateLoopRunning) {
+        if (!this.gameRoom.game.ended && !this.updateLoopRunning) {
           this.runUpdateLoop()
         }
       }
