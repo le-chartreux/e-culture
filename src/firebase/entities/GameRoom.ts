@@ -114,4 +114,8 @@ export class GameRoom {
       }
     }
   }
+
+  async restart() {
+    await this.startGameServer()
+  }
 }
