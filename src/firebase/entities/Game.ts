@@ -41,7 +41,7 @@ export class Game {
   private static getChosenQuizzesFromNumberSeed(seed: number): Quiz[] {
     const rng = prand.xoroshiro128plus(seed)
     const chosenQuizzes: Quiz[] = []
-    const availableQuizzes = Quiz.ALL
+    const availableQuizzes = [...Quiz.ALL]
     for (let i = 0; i < Game.NUMBER_OF_QUIZZES; i++) {
       const chosenIndex = prand.unsafeUniformIntDistribution(0, availableQuizzes.length - 1, rng)
       const chosenQuiz = availableQuizzes[chosenIndex]
