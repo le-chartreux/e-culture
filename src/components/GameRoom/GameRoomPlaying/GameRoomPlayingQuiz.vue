@@ -45,9 +45,12 @@ export default defineComponent({
   <div id="quiz">
     <h3>{{ quiz.question }}</h3>
     <p v-if="selectedAnswer" id="result">
-      The answer is {{quiz.correctAnswer.answer}}
-      <br>
-      You answered <span :id="selectedAnswer.correct ? 'correct-indicator' : 'incorrect-indicator'">{{selectedAnswer.answer}}</span>
+      The answer is {{ quiz.correctAnswer.answer }}
+      <br />
+      You answered
+      <span :id="selectedAnswer.correct ? 'correct-indicator' : 'incorrect-indicator'">{{
+        selectedAnswer.answer
+      }}</span>
       <br />
       Waiting for the next question...
     </p>

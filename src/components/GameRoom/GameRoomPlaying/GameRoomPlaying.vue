@@ -9,7 +9,7 @@ import { Player } from '@/firebase/entities/Player'
 export default defineComponent({
   data() {
     return {
-      player: Player.loadLocal(),
+      player: Player.loadLocal()
     }
   },
   props: {
@@ -37,10 +37,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <p>Quiz {{gameRoom.game.indexCurrentQuiz + 1}} of {{gameRoom.game.quizzes.length}}</p>
+  <p>Quiz {{ gameRoom.game.indexCurrentQuiz + 1 }} of {{ gameRoom.game.quizzes.length }}</p>
   <p>Remaining time: {{ gameRoom.game.timeUntilNextQuiz }}</p>
-  <GameRoomPlayingQuiz
-    :quiz="gameRoom.game.currentQuiz"
-    @answer-selected="sendAnswer"
-  />
+  <GameRoomPlayingQuiz :quiz="gameRoom.game.currentQuiz" @answer-selected="sendAnswer" />
 </template>
