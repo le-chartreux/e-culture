@@ -23,6 +23,15 @@ export class Quiz {
     return Quiz._ALL
   }
 
+  get correctAnswer(): QuizAnswer {
+    const correctAnswer: QuizAnswer | undefined = this.answers.find((answer: QuizAnswer) => answer.correct)
+    if (correctAnswer) {
+      return correctAnswer
+    } else {
+      throw Error(`Impossible to find the correct answer for the quiz ${this}.`)
+    }
+  }
+
   private static loadAll(): void {
     quizzesJson.map((quizJson, index: number) => {
       Quiz._ALL.push(Quiz.fromJsonAndId(quizJson, index.toString()))
