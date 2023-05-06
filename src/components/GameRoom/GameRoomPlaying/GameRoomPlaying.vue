@@ -5,14 +5,11 @@ import type { GameRoom } from '@/firebase/entities/GameRoom'
 import GameRoomPlayingQuiz from '@/components/GameRoom/GameRoomPlaying/GameRoomPlayingQuiz.vue'
 import type { QuizAnswer } from '@/firebase/entities/QuizAnswer'
 import { Player } from '@/firebase/entities/Player'
-import { Game } from '@/firebase/entities/Game'
 
 export default defineComponent({
   data() {
     return {
-      currentQuiz: this.gameRoom.game.currentQuiz,
       player: Player.loadLocal(),
-      timeUntilNextQuiz: Game.SECONDS_BY_QUESTION
     }
   },
   props: {
@@ -22,16 +19,10 @@ export default defineComponent({
     }
   },
   methods: {
-    updateLoopCurrentQuiz() {
+    runUpdateLoop() {
       if (!this.gameRoom.game.ended) {
-        this.currentQuiz = this.gameRoom.game.currentQuiz
-        setTimeout(this.updateLoopCurrentQuiz, 100)
-      }
-    },
-    updateLoopTimeUntilNextQuiz() {
-      if (!this.gameRoom.game.ended) {
-        this.timeUntilNextQuiz = this.gameRoom.game.timeUntilNextQuiz
-        setTimeout(this.updateLoopTimeUntilNextQuiz, 500)
+        this.$forceUpdate()
+        setTimeout(this.runUpdateLoop, 100)
       }
     },
     sendAnswer(answer: QuizAnswer) {
@@ -39,8 +30,7 @@ export default defineComponent({
     }
   },
   mounted() {
-    this.updateLoopCurrentQuiz()
-    this.updateLoopTimeUntilNextQuiz()
+    this.runUpdateLoop()
   },
   components: { GameRoomPlayingQuiz }
 })
