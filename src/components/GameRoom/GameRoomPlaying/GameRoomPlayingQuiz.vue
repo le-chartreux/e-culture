@@ -2,12 +2,14 @@
 import { defineComponent, type PropType } from 'vue'
 
 import type { Quiz } from '@/firebase/entities/Quiz'
-import type { QuizAnswer } from "@/firebase/entities/QuizAnswer";
+import type { QuizAnswer } from '@/firebase/entities/QuizAnswer'
 
 export default defineComponent({
-  data() { return {
-    selectedAnswer: null as null | QuizAnswer
-  }},
+  data() {
+    return {
+      selectedAnswer: null as null | QuizAnswer
+    }
+  },
   props: {
     quiz: {
       type: Object as PropType<Quiz>,
@@ -28,10 +30,10 @@ export default defineComponent({
     shuffledAnswers(): QuizAnswer[] {
       const shuffledAnswers = [...this.quiz.answers]
       for (let i = shuffledAnswers.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffledAnswers[i], shuffledAnswers[j]] = [shuffledAnswers[j], shuffledAnswers[i]];
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[shuffledAnswers[i], shuffledAnswers[j]] = [shuffledAnswers[j], shuffledAnswers[i]]
       }
-      return shuffledAnswers;
+      return shuffledAnswers
     }
   },
   methods: {
@@ -46,10 +48,11 @@ export default defineComponent({
 <template>
   <div id="quiz">
     <h3>{{ quiz.question }}</h3>
-    <p>Remaining time: {{remainingTime}}</p>
+    <p>Remaining time: {{ remainingTime }}</p>
     <p v-if="selectedAnswer" id="result">
-      Your answer is <span id="correct-indicator" v-if="selectedAnswer.correct">CORRECT</span><span id="incorrect-indicator" v-else>INCORRECT</span>
-      <br>
+      Your answer is <span id="correct-indicator" v-if="selectedAnswer.correct">CORRECT</span
+      ><span id="incorrect-indicator" v-else>INCORRECT</span>
+      <br />
       Waiting for the next question...
     </p>
     <ul id="answers" v-else>
@@ -87,15 +90,14 @@ export default defineComponent({
 }
 
 #result {
-    text-align: center;
+  text-align: center;
 }
 
 #correct-indicator {
-    color: green;
+  color: green;
 }
 
 #incorrect-indicator {
-    color: red
+  color: red;
 }
-
 </style>

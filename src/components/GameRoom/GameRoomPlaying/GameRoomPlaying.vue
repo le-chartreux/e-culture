@@ -5,7 +5,7 @@ import type { GameRoom } from '@/firebase/entities/GameRoom'
 import GameRoomPlayingQuiz from '@/components/GameRoom/GameRoomPlaying/GameRoomPlayingQuiz.vue'
 import type { QuizAnswer } from '@/firebase/entities/QuizAnswer'
 import { Player } from '@/firebase/entities/Player'
-import {Game} from "@/firebase/entities/Game";
+import { Game } from '@/firebase/entities/Game'
 
 export default defineComponent({
   data() {
@@ -47,5 +47,9 @@ export default defineComponent({
 </script>
 
 <template>
-  <GameRoomPlayingQuiz :quiz="currentQuiz" :remaining-time="timeUntilNextQuiz" @answer-selected="sendAnswer" />
+  <GameRoomPlayingQuiz
+    :quiz="currentQuiz"
+    :remaining-time="timeUntilNextQuiz"
+    @answer-selected="sendAnswer"
+  />
 </template>
