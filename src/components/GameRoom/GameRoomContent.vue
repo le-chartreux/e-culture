@@ -7,37 +7,23 @@ import GameRoomScores from '@/components/GameRoom/GameRoomScores.vue'
 import type { GameRoom } from '@/firebase/entities/GameRoom'
 
 export default defineComponent({
-  data() {
-    return {
-      gameEnded: null as boolean | null
-    }
-  },
+  data() {return {}},
   props: {
     gameRoom: {
       type: Object as PropType<GameRoom>,
       required: true
     }
   },
-  watch: {
-    gameRoom: {
-      // to set the initial value & detect starting the game again
-      handler() {
-        this.gameEnded = this.gameRoom.game.ended
-      },
-      immediate: true
-    }
-  },
   methods: {
-    updateLoopGameEnded() {
-      // since it's computed, we have to update it with timeout to track it
-      this.gameEnded = this.gameRoom.game.ended
-      if (!this.gameEnded) {
-        setTimeout(() => this.updateLoopGameEnded(), 100)
+    runUpdateLoop() {
+      if (!this.gameRoom.game.ended) {
+        this.$forceUpdate()
+        setTimeout(this.runUpdateLoop, 100)
       }
     }
   },
   mounted() {
-    this.updateLoopGameEnded()
+    this.runUpdateLoop()
   },
   components: { GameRoomPlaying, GameRoomWaiting, GameRoomScores }
 })
@@ -46,7 +32,7 @@ export default defineComponent({
 <template>
   <div v-if="gameRoom.game.started">
     <GameRoomScores :scores="gameRoom.scores" />
-    <p v-if="gameEnded">game ended</p>
+    <p v-if="gameRoom.game.ended">game ended</p>
     <GameRoomPlaying v-else :game-room="gameRoom" />
   </div>
   <GameRoomWaiting v-else :game-room="gameRoom" />
