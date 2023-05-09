@@ -15,12 +15,12 @@ export default defineComponent({
       <h1>About e-culture</h1>
       <p>
         E-culture is an educational multiplayer website hosting games meant to help people to learn
-        English in a fun and dynamic way. <br>
-        It is designed for anyone who is eager to learn more about
-        the English language and culture. While it does not require an excellent proficiency in
-        English, players do need to understand the questions in order to play correctly. <br>
-        The current version of e-culture allows players to create or join a Game Room, as well as test each
-        other’s knowledge with questions.
+        English in a fun and dynamic way. <br />
+        It is designed for anyone who is eager to learn more about the English language and culture.
+        While it does not require an excellent proficiency in English, players do need to understand
+        the questions in order to play correctly. <br />
+        The current version of e-culture allows players to create or join a Game Room, as well as
+        test each other’s knowledge with questions.
       </p>
     </main>
 
@@ -43,11 +43,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding:9rem;
+  padding: 9rem;
 }
 
 main p {
-  text-align:center;
+  text-align: center;
 }
 
 footer {
