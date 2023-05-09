@@ -424,7 +424,7 @@
   {
     "question": "Guess the Intruder : Which celebrity is not from England ?",
     "answers": [
-      { "answer": "", "correct": true },
+      { "answer": "Oscar Wilde", "correct": true },
       { "answer": "Helen Mirren", "correct": false },
       { "answer": "Judi Dench", "correct": false },
       { "answer": "Tom Hardy", "correct": false }
@@ -534,7 +534,7 @@
   {
     "question": "Guess the Intruder : Which celebrity is not from the United States ?",
     "answers": [
-      { "answer": "", "correct": true },
+      { "answer": "Justin Bieber", "correct": true },
       { "answer": "Chris Evans", "correct": false },
       { "answer": "Mark Wahlberg", "correct": false },
       { "answer": "Taylor Swift", "correct": false }
