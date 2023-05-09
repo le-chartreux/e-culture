@@ -12,11 +12,17 @@ app.use(router)
 app.mount('#app')
 
 // generating player if it does not exist
+let player: Player
 if (!Player.savedLocally()) {
-  const player = Player.generate()
+  player = Player.generate()
   player.saveLocal()
-  player.saveServer()
+} else {
+  player = Player.loadLocal()
 }
+// saving the local player on the server every time to prevent case where
+// the app was exited before the request was sent to the server and so it's
+// impossible to load the user from the server
+player.saveServer()
 
 // saving current page when reloading
 window.addEventListener('beforeunload', () => {
