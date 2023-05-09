@@ -699,7 +699,7 @@
     "question": "British or American : Which word is American ?",
     "answers": [
       { "answer": "Counseling", "correct": true },
-      { "answer": "Counselling", "Diarise": false }
+      { "answer": "Counselling", "correct": false }
     ],
     "tags": ["vocabulary"]
   },
@@ -707,7 +707,7 @@
     "question": "British or American : Which word is American ?",
     "answers": [
       { "answer": "Schedule", "correct": true },
-      { "answer": "Diarise", "Diarise": false }
+      { "answer": "Diarise", "correct": false }
     ],
     "tags": ["vocabulary"]
   }
