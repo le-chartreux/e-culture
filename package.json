@@ -31,6 +31,7 @@
   "license": "MIT",
   "homepage": "https://github.com/le-chartreux/e-culture#readme",
   "dependencies": {
+    "doodle.css": "^0.0.2",
     "firebase": "^9.21.0",
     "pure-rand": "^6.0.2",
     "vue": "^3.2.47",
