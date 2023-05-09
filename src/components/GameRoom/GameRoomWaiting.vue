@@ -33,8 +33,8 @@ export default defineComponent({
 
 <style scoped>
 #game-room-waiting {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
