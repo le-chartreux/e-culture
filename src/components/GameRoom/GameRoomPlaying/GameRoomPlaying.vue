@@ -37,7 +37,18 @@ export default defineComponent({
 </script>
 
 <template>
-  <p>Quiz {{ gameRoom.game.indexCurrentQuiz + 1 }} of {{ gameRoom.game.quizzes.length }}</p>
-  <p>Remaining time: {{ gameRoom.game.timeUntilNextQuiz }}</p>
-  <GameRoomPlayingQuiz :quiz="gameRoom.game.currentQuiz" @answer-selected="sendAnswer" />
+  <div id="game-room-playing">
+    <p>Quiz {{ gameRoom.game.indexCurrentQuiz + 1 }} of {{ gameRoom.game.quizzes.length }}</p>
+    <p>Remaining time: {{ gameRoom.game.timeUntilNextQuiz }}</p>
+    <GameRoomPlayingQuiz :quiz="gameRoom.game.currentQuiz" @answer-selected="sendAnswer" />
+  </div>
 </template>
+
+<style scoped>
+#game-room-playing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+</style>

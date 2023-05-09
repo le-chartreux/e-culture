@@ -17,16 +17,18 @@
   --vt-c-text-dark-2: rgb(235 235 235 / 64%);
 
   /* custom color palette */
-  --vt-c-grey-soft: rgb(220 220 220);
+  --vt-c-grey-soft: rgb(200 200 200);
+  --vt-c-grey-softer: rgb(220 220 220);
 
   /* semantic color variables for this project */
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
-  --color-background-focus: var(--vt-c-grey-soft);
   --color-background-mute: var(--vt-c-white-mute);
   --color-border: var(--vt-c-divider-light-2);
   --color-border-hover: var(--vt-c-divider-light-1);
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
+  --color-button-focus-background: var(--vt-c-grey-soft);
+  --color-button-hover-background: var(--vt-c-grey-softer);
   --section-gap: 160px;
 }

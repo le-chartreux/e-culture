@@ -20,7 +20,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div id="scores">
+  <div id="scores" class="doodle-border">
     <p>Scores:</p>
     <ul id="scores-ul">
       <li v-for="(score, index) in scores" :key="index">

@@ -3,6 +3,7 @@ import router from './router'
 
 import App from './App.vue'
 import './assets/main.css'
+import 'doodle.css/doodle.css'
 import { Player } from '@/firebase/entities/Player'
 
 // basic setup of the app

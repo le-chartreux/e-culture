@@ -25,7 +25,7 @@ export default defineComponent({
   <div id="create-game-route-input">
     <input type="text" v-model="gameRoomId" placeholder="Game Room ID" />
     <div v-if="gameRoomId">
-      <router-link :to="'/game-room/' + gameRoomId" class="pseudo-button" @click="createGameRoom"
+      <router-link :to="'/game-room/' + gameRoomId" class="pseudo-button doodle-border" @click="createGameRoom"
         >Create Game Room '{{ gameRoomId }}'</router-link
       >
     </div>
