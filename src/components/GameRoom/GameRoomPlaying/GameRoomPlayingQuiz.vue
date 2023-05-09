@@ -43,7 +43,7 @@ export default defineComponent({
 
 <template>
   <div id="quiz">
-    <h3>{{ quiz.question }}</h3>
+    <h3 id="question">{{ quiz.question }}</h3>
     <p v-if="selectedAnswer" id="result">
       The answer is {{ quiz.correctAnswer.answer }}
       <br />
@@ -69,6 +69,10 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#question {
+  text-align: center;
 }
 
 #answers {

@@ -47,10 +47,22 @@ export default defineComponent({
 </script>
 
 <template>
-  <div v-if="gameRoom.game.started">
-    <GameRoomScores :scores="gameRoom.scores" />
-    <GameRoomEnded v-if="gameRoom.game.ended" :game-room="gameRoom" />
-    <GameRoomPlaying v-else :game-room="gameRoom" />
+  <div id="game-room-content">
+    <div v-if="gameRoom.game.started" id="game-room-content-started">
+      <GameRoomScores :scores="gameRoom.scores" id="scores"/>
+      <GameRoomEnded v-if="gameRoom.game.ended" :game-room="gameRoom" />
+      <GameRoomPlaying v-else :game-room="gameRoom" />
+    </div>
+    <GameRoomWaiting v-else :game-room="gameRoom" />
   </div>
-  <GameRoomWaiting v-else :game-room="gameRoom" />
 </template>
+
+<style scoped>
+#game-room-content, #game-room-content-started {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+</style>

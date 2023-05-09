@@ -21,7 +21,7 @@ export default defineComponent({
 
 <template>
   <div id="scores" class="doodle-border">
-    <p>Scores:</p>
+    <h4>Scores</h4>
     <ul id="scores-ul">
       <li v-for="(score, index) in scores" :key="index">
         <span id="player-name">
