@@ -43,7 +43,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 9rem;
+  padding: 10%;
+  text-align: center;
 }
 
 main p {
