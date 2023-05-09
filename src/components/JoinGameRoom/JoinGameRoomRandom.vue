@@ -1,7 +1,9 @@
 <template>
   <div id="join-random-game-room">
     <h2>Join a Random Game Room</h2>
-    <router-link to="/game-room/random" class="pseudo-button doodle-border">Join a random Game Room</router-link>
+    <router-link to="/game-room/random" class="pseudo-button doodle-border"
+      >Join a random Game Room</router-link
+    >
   </div>
 </template>
 

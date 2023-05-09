@@ -46,9 +46,9 @@ export default defineComponent({
 
 <style scoped>
 #game-room-playing {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>

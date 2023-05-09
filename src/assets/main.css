@@ -11,8 +11,8 @@ body {
   color: var(--color-text);
   background: var(--color-background);
   line-height: 1.6;
-  font-family:'Short Stack', cursive, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Short Stack', cursive, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
 }
 
