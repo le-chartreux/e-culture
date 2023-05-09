@@ -122,7 +122,7 @@ export class GameRoom {
 
   static async createGameRoom(gameRoomId: string): Promise<GameRoom> {
     const newGameRoomRef = doc(gameRoomsRef, gameRoomId)
-    await setDoc(newGameRoomRef, {scores: []})
+    await setDoc(newGameRoomRef, { scores: [] })
     return await GameRoom.loadServerFromId(gameRoomId)
   }
 }

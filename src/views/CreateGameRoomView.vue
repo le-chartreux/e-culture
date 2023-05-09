@@ -2,7 +2,7 @@
 import { defineComponent } from 'vue'
 
 import HeaderDefault from '@/components/Header/HeaderDefault.vue'
-import CreateGameRoomInput from "@/components/CreateGameRoom/CreateGameRoomInput.vue";
+import CreateGameRoomInput from '@/components/CreateGameRoom/CreateGameRoomInput.vue'
 
 export default defineComponent({
   components: { HeaderDefault, CreateGameRoomInput }
@@ -14,23 +14,23 @@ export default defineComponent({
     <HeaderDefault />
     <main>
       <h2>Create a Game Room</h2>
-      <CreateGameRoomInput/>
+      <CreateGameRoomInput />
     </main>
   </div>
 </template>
 
 <style scoped>
 #create-game-room {
-    display: flex;
-    flex-direction: column;
-    height: 100dvh;
-    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  padding: 1rem;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>
