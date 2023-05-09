@@ -48,6 +48,7 @@ main {
 
 main > img {
   flex-grow: 1;
+  border: none;
 }
 
 #actions {
