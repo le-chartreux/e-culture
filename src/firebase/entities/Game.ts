@@ -23,7 +23,11 @@ export class Game {
    * numberOfQuizzes should be lower than the number of available quizzes!
    * */
   static fromStringSeed(seed: string, startTime: Date | null): Game {
-    return this.fromNumberSeed(this.stringSeedToNumberSeed(seed), startTime)
+    if (startTime) {
+      return this.fromNumberSeed(this.stringSeedToNumberSeed(seed) + startTime.valueOf(), startTime)
+    } else {
+      return this.fromNumberSeed(this.stringSeedToNumberSeed(seed), startTime)
+    }
   }
 
   /* Sum the char codes of the string seed  */
