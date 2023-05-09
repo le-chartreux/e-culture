@@ -19,9 +19,9 @@ export default defineComponent({
 <style scoped>
 header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   height: 10%;
+  flex-flow: wrap row;
 }
 
 header * {
