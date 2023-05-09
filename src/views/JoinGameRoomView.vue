@@ -30,8 +30,10 @@ export default defineComponent({
 #different-join {
   display: flex;
   justify-content: space-around;
-  flex-grow: 1;
+  align-items: center;
   font-size: large;
+  flex-wrap: wrap-reverse;
+  flex-grow: 1;
 }
 
 #different-join > * {
