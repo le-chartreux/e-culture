@@ -73,17 +73,21 @@ export default defineComponent({
 
 #answers {
   display: grid;
-  grid-template:
-    '. .'
-    '. .';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
 }
 
 #answers > li {
   list-style-type: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #answers > li > button {
   font-size: large;
+  flex-grow: 1;
   min-height: 20dvh;
   min-width: 30dvw;
 }

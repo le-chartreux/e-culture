@@ -14,7 +14,7 @@ export default defineComponent({
     <h2>Join a Game Room from an ID</h2>
     <input type="text" v-model="gameRoomId" placeholder="Game Room ID" />
     <div v-if="gameRoomId">
-      <router-link :to="'/game-room/' + gameRoomId" class="pseudo-button"
+      <router-link :to="'/game-room/' + gameRoomId" class="pseudo-button doodle-border"
         >Join Game Room '{{ gameRoomId }}'</router-link
       >
     </div>
