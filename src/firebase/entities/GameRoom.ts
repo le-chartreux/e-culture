@@ -5,7 +5,8 @@ import {
   DocumentReference,
   DocumentSnapshot,
   getDoc,
-  updateDoc
+  updateDoc,
+  setDoc
 } from 'firebase/firestore'
 
 import { Score } from '@/firebase/entities/Score'
@@ -117,5 +118,11 @@ export class GameRoom {
 
   async restart() {
     await this.startGameServer()
+  }
+
+  static async createGameRoom(gameRoomId: string): Promise<GameRoom> {
+    const newGameRoomRef = doc(gameRoomsRef, gameRoomId)
+    await setDoc(newGameRoomRef, {scores: []})
+    return await GameRoom.loadServerFromId(gameRoomId)
   }
 }
