@@ -44,10 +44,10 @@ main {
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
+  justify-content: space-evenly;
 }
 
 main > img {
-  flex-grow: 1;
   border: none;
 }
 
