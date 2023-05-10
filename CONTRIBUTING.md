@@ -32,6 +32,8 @@ In this guide you will get an overview of the contribution workflow, to get you 
 
 The framework [Vue.js](https://vuejs.org/) is used for the front-end.
 
+The CSS library [DoodleCSS](https://chr15m.github.io/DoodleCSS/) is used for the styling.
+
 ### Back-end
 
 The app is client-only, hosted on [GitHub pages](https://pages.github.com/).
