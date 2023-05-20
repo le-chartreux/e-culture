@@ -2,6 +2,8 @@
 
 In this guide you will get an overview of the contribution workflow, to get you started developing.
 
+⚠️ The code is probably crappy. I am not a Web Developper, this is my first time using Vue.js (and JS framework in genereal), Firebase and TypeScript (almost). ⚠️
+
 ## Table of contents
 
 <!-- TOC -->
